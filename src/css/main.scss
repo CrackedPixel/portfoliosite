@@ -7,6 +7,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 h1, h2, h3, h4 {
   color: $col-text_header;
 }
@@ -35,47 +40,44 @@ body {
   background: black;
 }
 
-.page {
+.welcome {
   @include displayFlex(column nowrap, 100%, 100vh, 0, 5rem);
-
-  &.welcome {
-     animation: fadein 2s;
-    h2 {
-      position: relative;
-      animation: slideUp1 2s;
-    }
-
-    p {
-      position: relative;
-      animation: slideRight1 3s;
-    }
-
-    .mainBtn {
-      position: relative;
-      animation: slideRight1 3.5s;
-    }
-
-    background: linear-gradient(to bottom right, $col-page1, darken($col-page1, 10%));
+  animation: fadein 2s;
+  h2 {
+    position: relative;
+    animation: slideUp1 2s;
   }
 
-  &.skillset {
-    background: linear-gradient(to bottom right, $col-page3, darken($col-page3, 10%));
+  p {
+    position: relative;
+    animation: slideRight1 3s;
   }
+
+  .mainBtn {
+    position: relative;
+    animation: slideRight1 3.5s;
+  }
+
+  background: linear-gradient(to bottom right, $col-page1, darken($col-page1, 10%));
 }
 
 .about {
-  @include displayFlex(column nowrap, 100%, unset, 0, 5rem);
+  @include displayFlex(column nowrap, 100%, unset, 0, 2.8rem 5rem 5rem 5rem);
   background: linear-gradient(to bottom right, $col-page2, darken($col-page2, 10%));
 }
 
+.skillset {
+  @include displayFlex(column nowrap, 100%, unset, 0, 2.8rem 5rem 5rem 5rem);
+  background: linear-gradient(to bottom right, $col-page3, darken($col-page3, 10%));
+}
 
 .projects {
-  @include displayFlex(column nowrap, 100%, unset, 0, 5rem);
+  @include displayFlex(column nowrap, 100%, unset, 0, 2.8rem 5rem 5rem 5rem);
   background: linear-gradient(to bottom right, $col-page4, darken($col-page4, 10%));
 }
 
 .contact {
-  @include displayFlex(column nowrap, 100%, unset, 0, 5rem);
+  @include displayFlex(column nowrap, 100%, unset, 0, 2.8rem 5rem 5rem 5rem);
   background: linear-gradient(to bottom right, $col-page5, darken($col-page5, 10%));
 }
 
@@ -146,6 +148,82 @@ body {
   }
 }
 
+.contact {
+  display: flex;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .contact__whole__container {
+    display: flex;
+    flex-flow: row nowrap;
+
+    
+
+    .formik__form--container {
+      display: flex;
+      flex-flow: column nowrap;
+      flex-grow: 1;
+      margin-right: 2rem;
+      padding-right: 2rem;
+      border-right: 1px solid $btn-col2;
+
+      h4 {
+        margin: 0 0 0.5rem 0;
+      }
+
+      .formik__field {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        border: 1px solid $btn-col2;
+        background: $btn-col3;
+        border-radius: 5px;
+        color: $white;
+      }
+
+      .formik__field[name="email"],.formik__field[name="name"] {
+        height: 2rem;
+        
+        
+      }
+
+      .formik__field[name="message"] {
+        height: 6rem;
+      }
+
+      .error.error-message {
+        color: $red;
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    .contact__mainpane {
+      max-width: 200px;
+
+      p {
+        margin-bottom: 3rem;
+      }
+
+      .social__container {
+        display: flex;
+        flex-flow: row nowrap;
+
+        a {
+          font-size: 1rem;
+          margin: 0 0.6rem;
+
+          &:nth-child(1){
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 footer {
   display: flex;
   width: 100%;
@@ -155,5 +233,31 @@ footer {
   span {
     font-size: 1rem;
     color: $col-text_footer;
+  }
+}
+
+header {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  padding: 0.9rem;
+  background: rgba(0,0,0,0.3);
+
+  nav {
+    display: flex;
+    width: 100%;
+
+    ul {
+      display: flex;
+      width: 100%;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        list-style-type: none;
+        margin: 0 1rem;
+      }
+    }
   }
 }

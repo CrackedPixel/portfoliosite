@@ -85,6 +85,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
 h1, h2, h3, h4 {
   color: white;
 }
@@ -113,7 +123,7 @@ body {
   background: black;
 }
 
-.page {
+.welcome {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,36 +134,28 @@ body {
   min-height: 100vh;
   width: 100%;
   padding: 5rem;
-}
-
-.page.welcome {
   -webkit-animation: fadein 2s;
           animation: fadein 2s;
   background: -webkit-gradient(linear, left top, right bottom, from(purple), to(#4d004d));
   background: linear-gradient(to bottom right, purple, #4d004d);
 }
 
-.page.welcome h2 {
+.welcome h2 {
   position: relative;
   -webkit-animation: slideUp1 2s;
           animation: slideUp1 2s;
 }
 
-.page.welcome p {
+.welcome p {
   position: relative;
   -webkit-animation: slideRight1 3s;
           animation: slideRight1 3s;
 }
 
-.page.welcome .mainBtn {
+.welcome .mainBtn {
   position: relative;
   -webkit-animation: slideRight1 3.5s;
           animation: slideRight1 3.5s;
-}
-
-.page.skillset {
-  background: -webkit-gradient(linear, left top, right bottom, from(#b74e91), to(#953d75));
-  background: linear-gradient(to bottom right, #b74e91, #953d75);
 }
 
 .about {
@@ -166,9 +168,24 @@ body {
           flex-flow: column nowrap;
   min-height: unset;
   width: 100%;
-  padding: 5rem;
+  padding: 2.8rem 5rem 5rem 5rem;
   background: -webkit-gradient(linear, left top, right bottom, from(#5e42a6), to(#493382));
   background: linear-gradient(to bottom right, #5e42a6, #493382);
+}
+
+.skillset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  min-height: unset;
+  width: 100%;
+  padding: 2.8rem 5rem 5rem 5rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#b74e91), to(#953d75));
+  background: linear-gradient(to bottom right, #b74e91, #953d75);
 }
 
 .projects {
@@ -181,7 +198,7 @@ body {
           flex-flow: column nowrap;
   min-height: unset;
   width: 100%;
-  padding: 5rem;
+  padding: 2.8rem 5rem 5rem 5rem;
   background: -webkit-gradient(linear, left top, right bottom, from(#5e42a6), to(#493382));
   background: linear-gradient(to bottom right, #5e42a6, #493382);
 }
@@ -196,9 +213,9 @@ body {
           flex-flow: column nowrap;
   min-height: unset;
   width: 100%;
-  padding: 5rem;
-  background: -webkit-gradient(linear, left top, right bottom, from(#b74e91), to(#953d75));
-  background: linear-gradient(to bottom right, #b74e91, #953d75);
+  padding: 2.8rem 5rem 5rem 5rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(purple), to(#4d004d));
+  background: linear-gradient(to bottom right, purple, #4d004d);
 }
 
 .mainBtn {
@@ -285,6 +302,96 @@ body {
   line-height: 3.4rem;
 }
 
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact p {
+  margin-bottom: 2rem;
+}
+
+.contact .contact__whole__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.contact .contact__whole__container .formik__form--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 2rem;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact .contact__whole__container .formik__form--container h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.contact .contact__whole__container .formik__form--container .formik__field {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: white;
+}
+
+.contact .contact__whole__container .formik__form--container .formik__field[name="email"], .contact .contact__whole__container .formik__form--container .formik__field[name="name"] {
+  height: 2rem;
+}
+
+.contact .contact__whole__container .formik__form--container .formik__field[name="message"] {
+  height: 6rem;
+}
+
+.contact .contact__whole__container .formik__form--container .error.error-message {
+  color: red;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.contact .contact__whole__container .contact__mainpane {
+  max-width: 200px;
+}
+
+.contact .contact__whole__container .contact__mainpane p {
+  margin-bottom: 3rem;
+}
+
+.contact .contact__whole__container .contact__mainpane .social__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.contact .contact__whole__container .contact__mainpane .social__container a {
+  font-size: 1rem;
+  margin: 0 0.6rem;
+}
+
+.contact .contact__whole__container .contact__mainpane .social__container a:nth-child(1) {
+  margin-left: 0;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,5 +404,44 @@ footer {
 footer span {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.2);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  padding: 0.9rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav ul li {
+  list-style-type: none;
+  margin: 0 1rem;
 }
 /*# sourceMappingURL=main.css.map */

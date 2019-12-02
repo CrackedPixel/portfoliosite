@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "fa fa-twitter",
+    "to": "https://twitter.com/ACarbajal721"
+  },
+  {
+    "icon": "fa fa-facebook",
+    "to": "https://facebook.com/CarbajalAnthony"
+  },
+  {
+    "icon": "fa fa-github",
+    "to": "https://github.com/CrackedPixel"
+  },
+  {
+    "icon": "fa fa-instagram",
+    "to": "https://www.instagram.com/crackedpixel"
+  },
+  {
+    "icon": "fa fa-linkedin",
+    "to": "https://www.linkedin.com/in/carbajalanthony"
+  }
+]

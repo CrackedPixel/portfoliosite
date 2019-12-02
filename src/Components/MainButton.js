@@ -3,6 +3,9 @@ import React from 'react'
 export const MainButton = (props) => {
 
   const sendToPage = e => {
+    if (props.href === undefined){
+      return;
+    }
     console.log("SEND", props.href);
     if (props.target) {
       window.open(props.href, props.target);
@@ -12,7 +15,7 @@ export const MainButton = (props) => {
   }
 
   return ( 
-  <button className="mainBtn" onClick={sendToPage}>
+  <button type={props.type} className="mainBtn" onClick={sendToPage}>
     {props.preico ? props.preico : null}
     {props.preicon ? <i className={props.preicon + " mainBtnIcon"}></i> : null }
     <span>
