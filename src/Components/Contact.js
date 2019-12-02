@@ -4,14 +4,18 @@ import * as Yup from 'yup';
 import { MainButton } from './MainButton';
 import socials from '../db/social.json';
 import emailjs from 'emailjs-com';
+import emailconfig from '../emailconfig.json';
 
 export const Contact = () => {
 
   const handle_submit = values => {
     console.log(values);
     emailjs
-      .send('gmail', 'portfoliocontact_form', values, 'user_id')
-      .then(res => console.log("RES", res));
+      .send(emailconfig.protocol, emailconfig.templateid, values, emailconfig.userid)
+      .then(res => console.log("RES", res))
+      .catch(err => {
+        console.log("ERR", err);
+      });
       
   }
 
@@ -36,9 +40,9 @@ export const Contact = () => {
       <div className="contact__whole__container">
           <Formik
             initialValues={{
-              name: "",
-              email: "",
-              message: ""
+              name: "asdasd",
+              email: "asdasd@asdad.com",
+              message: "asdasdasdasd"
             }}
             onSubmit={handle_submit}
             validationSchema={validate_formik_form}
