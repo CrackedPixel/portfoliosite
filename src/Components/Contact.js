@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { MainButton } from './MainButton';
@@ -7,14 +7,21 @@ import emailjs from 'emailjs-com';
 import emailconfig from '../emailconfig.json';
 
 export const Contact = () => {
-
+  const [sentEC, setSendEC] = useState(0);
   const handle_submit = values => {
-    console.log(values);
     emailjs
       .send(emailconfig.protocol, emailconfig.templateid, values, emailconfig.userid)
-      .then(res => console.log("RES", res))
+      .then(res => setSendEC(res.status))
+      .then( () => {
+        setTimeout( () => {
+          setSendEC(0);
+        }, 3000)
+      })
       .catch(err => {
-        console.log("ERR", err);
+        setSendEC(err.status);
+        setTimeout( () => {
+          setSendEC(0);
+        }, 3000)
       });
       
   }
@@ -50,7 +57,7 @@ export const Contact = () => {
             {
               formikProps => (
                 <Form className="formik__form--container" onSubmit={formikProps.handleSubmit}>  
-                <h4>Name</h4>
+                  <h4>Name</h4>
                   <Field 
                     onChange={formikProps.handleChange}
                     type="text"
@@ -78,6 +85,9 @@ export const Contact = () => {
                   />
                   <ErrorMessage name="message" component="div" className="error error-message"/>
                   <MainButton type="Submit" preicon="fa fa-share" text="Send"/>
+                  {
+                    sentEC > 0 ? sentEC === 200 ? <span className="emailResult__valid">Your message has been sent!</span> : <span className="emailResult__invalid">There was an error sending your message</span> : null
+                  }
                 </Form>
               )
             }
