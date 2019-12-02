@@ -9,6 +9,10 @@ export const Contact = () => {
 
   const handle_submit = values => {
     console.log(values);
+    emailjs
+      .send('gmail', 'portfoliocontact_form', values, 'user_id')
+      .then(res => console.log("RES", res));
+      
   }
 
   const validate_formik_form = Yup.object().shape({
@@ -18,8 +22,7 @@ export const Contact = () => {
     name: Yup.string()
       .required("Name Required")
       .min(3, "Too short")
-      .max(32, "Too long")
-      .oneOf([" "], "First and last name required"),
+      .max(32, "Too long"),
     message: Yup.string()
       .required("Message required")
       .min(5, "Too short")
