@@ -40,9 +40,12 @@ body {
   background: black;
 }
 
+.page {
+  // animation: fadein 2s;
+}
+
 .welcome {
   @include displayFlex(column nowrap, 100%, 100vh, 0, 5rem);
-  animation: fadein 2s;
   h2 {
     position: relative;
     animation: slideUp1 2s;
@@ -242,6 +245,7 @@ header {
   position: fixed;
   padding: 0.9rem;
   background: rgba(0,0,0,0.3);
+  animation: slideDown1 3s;
 
   nav {
     display: flex;

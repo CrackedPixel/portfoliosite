@@ -17,3 +17,9 @@
   from {left: -100vw; }
   to {left: 0; }
 }
+
+@keyframes slideDown1 {
+  0% { top: -4rem; }
+  50% {top: -4rem; }
+  100% { top: 0; }
+}
