@@ -123,7 +123,7 @@ export const Contact = () => {
               {
                 socials.social.map((item, i) => {
                   return (
-                    <a key={i} href={item.to}><i className={item.icon}></i></a>
+                    <a key={i} href={item.to}><i className={item.icon + " socialIcon"}></i></a>
                   )
                 })
               }

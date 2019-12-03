@@ -1,5 +1,6 @@
 @import "reset";
 @import "colours";
+@import "media";
 @import "mixins";
 @import "keyframes";
 
@@ -43,7 +44,7 @@ body {
 }
 
 .page {
-  // animation: fadein 2s;
+   animation: fadein 2s;
 }
 
 .welcome {
@@ -64,18 +65,73 @@ body {
   }
 
   background: linear-gradient(to bottom right, $col-page1, darken($col-page1, 10%));
+
+  @media #{$mobile-s}{
+    align-items: center;
+    padding: 5rem 0 0 0;
+    
+    a {
+     font-size: $mobile-font-main; 
+    }
+
+    h3 {
+      font-size: $mobile-font-header;
+    }
+
+    p {
+      font-size: $mobile-font-main;
+      padding: 0 $mobile-font-main;
+    }
+  }
 }
 
 $pagePad: 2.8rem 10vw 5rem 10vw;
 
+@media #{$mobile-m}{
+  $pagePad: 2.8rem 5vw 5rem 5vw;
+}
+
 .about {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page2, darken($col-page2, 10%));
+
+  @media #{$mobile-s}{
+    align-items: center;
+    padding: 2.8rem 0 2rem 0;
+    // margin-bottom: 2rem;
+    h3 {
+      font-size: $mobile-font-header;
+      white-space: nowrap;
+    }
+
+    p {
+      font-size: $mobile-font-main;
+      padding: 0 $mobile-font-main;
+    }
+  }
 }
 
 .skillset {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page3, darken($col-page3, 10%));
+
+  @media #{$mobile-s}{
+    align-items: center;
+    padding: 2.5rem 0 0 0;
+    h3 {
+      font-size: $mobile-font-header;
+    }
+
+    p {
+      font-size: $mobile-font-main;
+      padding: 0 $mobile-font-main;
+    }
+  }
+
+  @media #{$mobile-m}{
+    // justify-content: center;
+    padding: 2.5rem 2vw 8vw 2vw;
+  }
 }
 
 .projects {
@@ -98,7 +154,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   border-radius: 3rem;
   border: 1px solid $btn-col1;
   background: transparent;
-  transition: all 0.2s;
+  transition: all 0.5s ease-out;
   color: $white;
   text-transform: uppercase;
   font-size: 0.6rem;
@@ -170,6 +226,54 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
       text-align: center;
       line-height: 3.4rem;
     }
+  }
+
+  @media #{$mobile-s}{
+    flex-flow: column nowrap;
+    padding-bottom: $mobile-pad-size2;
+
+    .skill__object {
+      max-width: unset;
+      width: 90%;
+      align-items: center;
+      margin: 0 $mobile-pad-size;
+      padding: 0;
+
+      h4 {
+        margin-top: 1rem;
+        font-size: $mobile-font-main2;
+        white-space: nowrap;
+      }
+
+      p {
+        font-size: $mobile-font-main;
+        margin-bottom: $mobile-pad-size2;
+      }
+
+      .skill__icon {
+        position: unset;
+        left: 0;
+        top: 0;
+        margin-top: $mobile-pad-size2;
+      }
+    }
+  }
+
+  @media #{$mobile-m} {
+    .skill__object {
+      padding: 0 3vw 3vw 6vw;
+
+      .skill__icon {
+        margin: 1rem 1rem 1rem 0;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    h4 {
+      white-space: nowrap;
+      // margin-left: 5vw;
+    }    
   }
 }
 
@@ -248,6 +352,13 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
       }
     }
   }
+
+  @media #{$mobile-s} {
+    flex-flow: column nowrap;
+  }
+  @media #{$mobile-m}{
+    flex-flow: column nowrap;
+  }
 }
 
 .contact {
@@ -263,11 +374,16 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   .contact__whole__container {
     display: flex;
     flex-flow: row nowrap;
+    width: 100%;
+    max-width: 1000px;
+    align-self: center;
 
     .formik__form--container {
       display: flex;
       flex-flow: column nowrap;
       flex-grow: 1;
+      width: 100%;
+      max-width: 800px;
       margin-right: 2rem;
       padding-right: 2rem;
       border-right: 1px solid $btn-col2;
@@ -320,6 +436,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
       p {
         margin-bottom: 3rem;
+        user-select: text;
       }
 
       .social__container {
@@ -333,10 +450,58 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
           &:nth-child(1){
             margin-left: 0;
           }
+
+          .socialIcon {
+            transition: all 0.5s ease-out;
+            color: $col-text_main;
+            
+            &:hover {
+              color: $col-text_main--hover;
+            }
+          }
         }
       }
     }
   }
+
+  @media #{$mobile-s}{
+    align-items: center;
+    padding: 2.8rem 0 0 0;
+    h3 {
+      font-size: $mobile-font-header;
+      white-space: nowrap;
+    }
+
+    p {
+      font-size: $mobile-font-main;
+      padding: 0 $mobile-font-main;
+      white-space: break-spaces;
+    }
+
+    .contact__whole__container {
+      flex-flow: column nowrap;
+      padding-bottom: 2rem;
+
+      .formik__form--container {
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+        
+        button {
+          align-self: center;
+        }
+      }
+
+      .contact__mainpane {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 0;
+        margin: 0;
+        max-width: unset;
+        align-items: center;
+      }
+    }
+  }
+
 }
 
 
@@ -344,11 +509,16 @@ footer {
   display: flex;
   width: 100%;
   background: $footer-bg;
-  padding: 2rem 2rem 2rem 5rem;
+  padding: 2rem 2rem 2rem 5vw;
 
   span {
     font-size: 1rem;
     color: $col-text_footer;
+  }
+
+  @media #{$mobile-s} {
+    padding: $mobile-pad-size;
+    justify-content: center;
   }
 }
 
