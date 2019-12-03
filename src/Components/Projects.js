@@ -30,14 +30,10 @@ export const Projects = () => {
     if (adjust < 0) {
       if (curImage === 0) return;
     }else{
-      if (curImage === projects[selectedProj].pics.length) return;
+      if (curImage === projects[selectedProj].pics.length-1) return;
     }
     setCurImage(curImage+adjust);
   }
-
-
-  console.log(selectedProj);
-  console.log(projects);
 
   return (
     <div className="projects" id="projects">

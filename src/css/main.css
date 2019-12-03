@@ -397,7 +397,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 1rem;
-  max-width: 300px;
+  width: 300px;
 }
 
 .project__present__container .present__left .present__preview__holder .present__preview__img {
@@ -405,6 +405,57 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+}
+
+.project__present__container .present__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding-left: 1rem;
+}
+
+.project__present__container .present__right h4 {
+  margin: 0.2rem 0;
+  font-size: 1.5rem;
+}
+
+.project__present__container .present__right p {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.project__present__container .present__right span {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.project__present__container .present__right .present__right__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.project__present__container .present__right .present__right__links a {
+  font-size: 0.9rem;
+}
+
+.project__present__container .present__right .present__right__links span {
+  font-size: 1rem;
+  margin: 0 0.3rem;
 }
 
 .contact {

@@ -194,7 +194,6 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 .project__present__container {
   display: flex;
 
-
   .present__left {
     margin-left: 1rem;
     display: flex;
@@ -202,7 +201,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
     .present__preview__holder {
       display: flex;
       margin: 1rem;
-      max-width: 300px;
+      width: 300px;
 
       .present__preview__img {
         display: flex;
@@ -212,7 +211,42 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   }
 
   .present__right {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 1rem;
 
+    h4 {
+      margin: 0.2rem 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    span {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: $col-text_main;
+    }
+
+    .present__right__links {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin-top: 2rem;
+
+      a {
+        font-size: 0.9rem;
+      }
+
+      span {
+        font-size: 1rem;
+        margin: 0 0.3rem;
+      }
+    }
   }
 }
 
