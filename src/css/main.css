@@ -322,6 +322,22 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.skills__container .skill__object:nth-child(1) {
+  border-top-left-radius: 6px;
+}
+
+.skills__container .skill__object:nth-child(2) {
+  border-top-right-radius: 6px;
+}
+
+.skills__container .skill__object:nth-last-child(1) {
+  border-bottom-right-radius: 6px;
+}
+
+.skills__container .skill__object:nth-last-child(2) {
+  border-bottom-left-radius: 6px;
+}
+
 .skills__container .skill__object .skill__icon {
   background: white;
   border-radius: 50%;

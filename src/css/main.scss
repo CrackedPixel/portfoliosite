@@ -136,6 +136,24 @@ body {
     padding: 0 3rem 3rem 5rem;
     border: 1px solid $btn-col2;
 
+    $rad: 6px;
+
+    &:nth-child(1) {
+      border-top-left-radius: $rad;
+    }
+
+    &:nth-child(2) {
+      border-top-right-radius: $rad;
+    }
+
+    &:nth-last-child(1) {
+      border-bottom-right-radius: $rad;
+    }
+
+    &:nth-last-child(2) {
+      border-bottom-left-radius: $rad;
+    }
+
     .skill__icon {
       background: white;
       border-radius: 50%;
