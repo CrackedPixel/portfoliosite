@@ -8,16 +8,16 @@ import emailconfig from '../emailconfig.json';
 
 export const Contact = () => {
   const [sentEC, setSendEC] = useState(0);
-  const [socials, setSocials] = useState([]);
+  const [socials, setSocials] = useState({});
 
   useEffect(() => {
-    fetch(`${config.dburl}social.json`, {mode: 'cors', header: {'Access-Control-Allow-Origin':'*'}})
+    fetch(`${config.dburl}contact.json`, {mode: 'cors', header: {'Access-Control-Allow-Origin':'*'}})
       .then(res => {return res.json()})
       .then(stuff => setSocials(stuff))
       .catch(err => {
         console.log(err);
       })
-  }, );
+  }, []);
 
   const handle_submit = values => {
     emailjs
@@ -49,6 +49,8 @@ export const Contact = () => {
       .min(5, "Too short")
       .max(2000, "Too long")
   });
+
+  console.log(socials);
 
   return (
     <div className="contact" id="contact">
@@ -102,15 +104,24 @@ export const Contact = () => {
               )
             }
           </Formik>
+        {
+          socials.contacts
+        ?
         <div className="contact__mainpane">
-            <h4>Email</h4>
-            <p>acarbajal721@live.com</p>
-            <h4>Phone</h4>
-            <p>(503) 683-1721</p>
+            {
+              socials.contacts.map((item, i) => {
+                return (
+                  <React.Fragment key={i}>
+                    <h4>{item.title}</h4>
+                    <p>{item.content}</p>
+                  </React.Fragment>
+                )
+              })
+            }
             <h4>Social</h4>
             <div className="social__container">
               {
-                socials.map((item, i) => {
+                socials.social.map((item, i) => {
                   return (
                     <a key={i} href={item.to}><i className={item.icon}></i></a>
                   )
@@ -118,6 +129,8 @@ export const Contact = () => {
               }
             </div>
         </div>
+        : null
+        }
       </div>
     </div>
   )
