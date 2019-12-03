@@ -173,6 +173,49 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   }
 }
 
+.project__selector__container {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .project__selector__obj {
+    display: flex;
+    margin: 1rem;
+
+    .project__selector__img {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+.project__present__container {
+  display: flex;
+
+
+  .present__left {
+    margin-left: 1rem;
+    display: flex;
+
+    .present__preview__holder {
+      display: flex;
+      margin: 1rem;
+      max-width: 300px;
+
+      .present__preview__img {
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+
+  .present__right {
+
+  }
+}
+
 .contact {
   display: flex;
   justify-content: space-around;
@@ -194,7 +237,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
       margin-right: 2rem;
       padding-right: 2rem;
       border-right: 1px solid $btn-col2;
-      max-width: 800px;
+      // max-width: 800px;
 
       h4 {
         margin: 0 0 0.5rem 0;

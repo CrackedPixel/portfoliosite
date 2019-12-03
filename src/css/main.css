@@ -352,6 +352,61 @@ body {
   line-height: 3.4rem;
 }
 
+.project__selector__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.project__selector__container .project__selector__obj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+}
+
+.project__selector__container .project__selector__obj .project__selector__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.project__present__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project__present__container .present__left {
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project__present__container .present__left .present__preview__holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  max-width: 300px;
+}
+
+.project__present__container .present__left .present__preview__holder .present__preview__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,7 +445,6 @@ body {
   margin-right: 2rem;
   padding-right: 2rem;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
-  max-width: 800px;
 }
 
 .contact .contact__whole__container .formik__form--container h4 {
