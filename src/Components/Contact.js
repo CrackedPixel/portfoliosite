@@ -57,9 +57,9 @@ export const Contact = () => {
       <div className="contact__whole__container">
           <Formik
             initialValues={{
-              name: "asdasd",
-              email: "asdasd@asdad.com",
-              message: "asdasdasdasd"
+              name: "",
+              email: "",
+              message: ""
             }}
             onSubmit={handle_submit}
             validationSchema={validate_formik_form}

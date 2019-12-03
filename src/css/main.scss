@@ -66,23 +66,25 @@ body {
   background: linear-gradient(to bottom right, $col-page1, darken($col-page1, 10%));
 }
 
+$pagePad: 2.8rem 10vw 5rem 10vw;
+
 .about {
-  @include displayFlex(column nowrap, 100%, unset, 0, 2.8rem 5rem 5rem 5rem);
+  @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page2, darken($col-page2, 10%));
 }
 
 .skillset {
-  @include displayFlex(column nowrap, 100%, unset, 0, 2.8rem 5rem 5rem 5rem);
+  @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page3, darken($col-page3, 10%));
 }
 
 .projects {
-  @include displayFlex(column nowrap, 100%, unset, 0, 2.8rem 5rem 5rem 5rem);
+  @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page4, darken($col-page4, 10%));
 }
 
 .contact {
-  @include displayFlex(column nowrap, 100%, unset, 0, 2.8rem 5rem 5rem 5rem);
+  @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page5, darken($col-page5, 10%));
 }
 
@@ -173,6 +175,9 @@ body {
 
 .contact {
   display: flex;
+  justify-content: space-around;
+  padding-left: 10vw;
+  padding-right: 10vw;
 
   p {
     margin-bottom: 2rem;
@@ -182,8 +187,6 @@ body {
     display: flex;
     flex-flow: row nowrap;
 
-    
-
     .formik__form--container {
       display: flex;
       flex-flow: column nowrap;
@@ -191,6 +194,7 @@ body {
       margin-right: 2rem;
       padding-right: 2rem;
       border-right: 1px solid $btn-col2;
+      max-width: 800px;
 
       h4 {
         margin: 0 0 0.5rem 0;
