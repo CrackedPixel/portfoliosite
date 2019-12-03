@@ -123,6 +123,8 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
 h1, h2, h3, h4 {

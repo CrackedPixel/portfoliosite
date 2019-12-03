@@ -1,8 +1,19 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { SkillComp } from './SkillComp'
-import skills from '../db/skills.json';
+import config from '../config.json';
 
 export const Skillset = () => {
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    fetch(`${config.dburl}skills.json`, {mode: 'cors', header: {'Access-Control-Allow-Origin':'*'}})
+      .then(res => {return res.json()})
+      .then(stuff => setSkills(stuff))
+      .catch(err => {
+        console.log(err);
+      })
+  }, );
+
   return (
     <div className="skillset" id="skillset">
       <h3>Skillset</h3>

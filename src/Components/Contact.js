@@ -1,13 +1,24 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { MainButton } from './MainButton';
-import socials from '../db/social.json';
+import config from '../config.json';
 import emailjs from 'emailjs-com';
 import emailconfig from '../emailconfig.json';
 
 export const Contact = () => {
   const [sentEC, setSendEC] = useState(0);
+  const [socials, setSocials] = useState([]);
+
+  useEffect(() => {
+    fetch(`${config.dburl}social.json`, {mode: 'cors', header: {'Access-Control-Allow-Origin':'*'}})
+      .then(res => {return res.json()})
+      .then(stuff => setSocials(stuff))
+      .catch(err => {
+        console.log(err);
+      })
+  }, );
+
   const handle_submit = values => {
     emailjs
       .send(emailconfig.protocol, emailconfig.templateid, values, emailconfig.userid)
@@ -23,7 +34,6 @@ export const Contact = () => {
           setSendEC(0);
         }, 3000)
       });
-      
   }
 
   const validate_formik_form = Yup.object().shape({
