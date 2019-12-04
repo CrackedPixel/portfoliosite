@@ -16,7 +16,7 @@ html {
 }
 
 h1, h2, h3, h4 {
-  color: $col-text_header;
+  // color: $col-text_header;
 }
 
 h1 {
@@ -37,8 +37,7 @@ h4 {
 }
 
 p, a {
-  font-family: Arial, Helvetica, sans-serif;
-  color: $col-text_main;
+  // color: $col-text_main;
   font-size: 1.1rem;
   margin: 0.5rem 0;
   font-weight: 500;
@@ -47,6 +46,7 @@ p, a {
 body {
   background: black;
   user-select: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 .page {
@@ -56,10 +56,12 @@ body {
 .welcome {
   @include displayFlex(column nowrap, 100%, 100vh, 0, 5rem 5vw 5rem 5vw);
 
+  // Colours
+  @include pageColour($font-page1);
+
   h1 {
     position: relative;
     align-self: flex-end;
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     line-height: 1.2;
     white-space: nowrap;
@@ -110,6 +112,10 @@ body {
 
       .col1 {
         color: $col-page5;
+      }
+
+      .col2 {
+        color: $btn-col1;
       }
     }
 
@@ -208,6 +214,9 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page2, darken($col-page2, 10%));
 
+  // Colours 
+  @include pageColour($font-page2);
+
   @media #{$mobile-s}{
     align-items: center;
     padding: 2.8rem 0 2rem 0;
@@ -227,6 +236,10 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 .skillset {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page3, darken($col-page3, 10%));
+
+  // Colours
+  @include pageColour($font-page3);
+
 
   @media #{$mobile-s}{
     align-items: center;
@@ -250,11 +263,19 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 .projects {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page4, darken($col-page4, 10%));
+
+  h3 {
+    color: $font-page4;
+  }
 }
 
 .contact {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
   background: linear-gradient(to bottom right, $col-page5, darken($col-page5, 10%));
+
+  h3 {
+    color: $font-page5;
+  }
 }
 
 .mainBtn {
@@ -267,7 +288,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   border-radius: 3rem;
   border: 1px solid $btn-col1;
   background: transparent;
-  transition: all 0.5s ease-out;
+  transition: all $hoverSpeed--btn ease-out;
   color: $white;
   text-transform: uppercase;
   font-size: 0.6rem;
@@ -277,7 +298,8 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   &:hover {
     border: 1px solid $btn-col1;
     background: $btn-col2;
-    box-shadow: 0 0 10px 5px $btn-col3;
+    @include btnBoxShadow(0,0,10px,5px,$btn-col3);
+    // box-shadow: 0 0 10px 5px $btn-col3;
 
     span {
       text-decoration: underline;
@@ -299,6 +321,13 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   display: flex;
   flex-flow: row wrap;
   margin-top: 1rem;
+
+  // Colours
+
+  .skill__object .skill__icon {
+    background: linear-gradient(to bottom left, rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+    color: $font-page3;
+  }
 
   .skill__object {
     display: flex;
@@ -326,10 +355,10 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
     }
 
     .skill__icon {
-      background: white;
+      // background: white;
       border-radius: 50%;
       font-size: 2rem;
-      color: black;
+      // color: black;
 
       position: relative;
       left: -4rem;
@@ -432,6 +461,9 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
     flex-flow: column nowrap;
     padding-left: 1rem;
 
+    // Colours
+    @include pageColour($font-page4);
+
     h4 {
       margin: 0.2rem 0;
       font-size: 1.5rem;
@@ -446,7 +478,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
     span {
       margin-top: 2rem;
       font-size: 1rem;
-      color: $col-text_main;
+      // color: $col-text_main;
     }
 
     .present__right__links {
@@ -480,6 +512,10 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   padding-left: 10vw;
   padding-right: 10vw;
 
+  // Colours
+  @include pageColour($font-page5);
+
+  
   p {
     margin-bottom: 2rem;
   }
@@ -509,10 +545,12 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
       .formik__field {
         margin: 0.5rem 0;
         padding: 0.5rem;
-        border: 1px solid $btn-col2;
+        // border: 1px solid $btn-col2;
+        border-width: 1px;
+        border-style: solid;
         background: $btn-col3;
         border-radius: 5px;
-        color: $white;
+        // color: $white;
       }
 
       .formik__field[name="email"],.formik__field[name="name"] {
@@ -562,15 +600,6 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
           &:nth-child(1){
             margin-left: 0;
-          }
-
-          .socialIcon {
-            transition: all 0.5s ease-out;
-            color: $col-text_main;
-            
-            &:hover {
-              color: $col-text_main--hover;
-            }
           }
         }
       }
@@ -624,9 +653,11 @@ footer {
   background: $footer-bg;
   padding: 2rem 2rem 2rem 5vw;
 
+  @include pageColour($font-footer);
+
   span {
     font-size: 1rem;
-    color: $col-text_footer;
+    // color: $col-text_footer;
   }
 
   @media #{$mobile-s} {
@@ -643,6 +674,39 @@ header {
   padding: 0.9rem;
   background: rgba(0,0,0,0.3);
   animation: slideDown1 3s;
+
+  $colorShiftSpeed: 1s;
+
+  &.p1 {
+    nav > ul > li > a {
+      @include anchorColour($font-header-page1, $colorShiftSpeed);
+    }
+  }
+
+  &.p2 {
+    nav > ul > li > a {
+      @include anchorColour($font-header-page2, $colorShiftSpeed);
+    }
+  }
+
+  &.p3 {
+    nav > ul > li > a {
+      @include anchorColour($font-header-page3, $colorShiftSpeed);
+    }
+  }
+
+  &.p4 {
+    nav > ul > li > a {
+      @include anchorColour($font-header-page4, $colorShiftSpeed);
+    }
+  }
+
+  &.p5 {
+    nav > ul > li > a {
+      @include anchorColour($font-header-page5, $colorShiftSpeed);
+    }
+  }
+
 
   nav {
     display: flex;

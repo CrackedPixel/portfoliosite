@@ -1,3 +1,6 @@
+$white: white;
+$red: red;
+
 $col-purple1: purple;
 $col-blue1: #5e42a6;
 $col-pink1: #b74e91;
@@ -11,6 +14,7 @@ $col-page2: $col-blue1;
 $col-page3: $col-pink1;
 $col-page4: $col-blue1;
 $col-page5: $col-purple1;
+$font-footer: white;
 
 /*
   Second palette
@@ -20,6 +24,7 @@ $col-page2: #f35588;
 $col-page3: #ffbbb4;
 $col-page4: #71a95a;
 $col-page5: #007944;
+$font-footer: white;
 
 /* 
   Third palette
@@ -29,9 +34,28 @@ $col-page2: #151965;
 $col-page3: #32407b;
 $col-page4: #515585;
 $col-page5: #46b5d1;
+$font-footer: white;
+
+$font-page1: $white;
+$font-page2: red;
+$font-page3: green;
+$font-page4: blue;
+$font-page5: yellow;
+$font-footer: white;
 
 
-$white: white;
+$font-header-page1: $white;
+$font-header-page2: $font-page2;
+$font-header-page3: $font-page3;
+$font-header-page4: $font-page4;
+$font-header-page5: $font-page5;
+
+$font-lighten: 0.6;
+$font-lighten--hover: 0.8;
+
+$btn-lighten--hover: 0.2;
+$btn-lighten--border: 0.1;
+$btn-lighten--boxshadow: 0.4;
 
 $col-text_header: $white;
 $col-text_main: rgba(255,255,255,0.6);
@@ -43,5 +67,3 @@ $btn-col2: rgba(255,255,255,0.2);
 $btn-col3: rgba(255,255,255,0.1);
 
 $footer-bg: $col-blue1;
-
-$red: red;

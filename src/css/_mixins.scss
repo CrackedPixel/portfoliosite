@@ -6,6 +6,55 @@
   padding: $padding;
 }
 
+@mixin btnBoxShadow($ho: 0, $vo: 0, $bv: 10px, $sv:5px, $col:white){
+  box-shadow: $ho $vo $bv $sv $col;
+}
+
+@mixin anchorColour($col, $nS: $hoverSpeed--url) {
+  transition: all $nS ease-out;
+  color: rgba($col, $font-lighten);
+
+  &:hover {
+    color: rgba($col, $font-lighten--hover)
+  }
+}
+
+@mixin pageColour($pageCol) {
+
+  h1, h2, h3, h4 {
+    color: $pageCol;
+  }
+
+  p, span {
+    color: rgba($pageCol, $font-lighten);
+  }
+
+  .socialIcon, a {
+    @include anchorColour($pageCol);
+  }
+
+  .mainBtn {
+    color: $pageCol;
+    border-color: rgba($pageCol, $font-lighten--hover);
+
+    &:hover {
+      border-color: rgba($pageCol, $font-lighten);
+      background: rgba($pageCol, $btn-lighten--hover);
+
+      // box-shadow: box-shadow: 0 0 10px 5px $btn-lighten--border;
+      @include btnBoxShadow(0,0,10px,5px, rgba($pageCol, $btn-lighten--boxshadow));
+    }
+  }
+
+  .formik__field {
+    color: $pageCol;
+    border-color: rgba($pageCol, $font-lighten);
+  }
+}
+
+
+
+
 $mobile-font-header: 15vw;
 $mobile-font-header2: 17vw;
 $mobile-font-main: 5vw;

@@ -50,8 +50,6 @@ export const Contact = () => {
       .max(2000, "Too long")
   });
 
-  console.log(socials);
-
   return (
     <div className="contact" id="contact">
       <h3>Get in touch</h3>

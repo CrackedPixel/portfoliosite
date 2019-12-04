@@ -2,7 +2,7 @@ import React from 'react'
 
 export const HeaderNav = () => {
   return (
-    <header>
+    <header id="header">
       <nav>
         <ul>
           <li><a href="#welcome">Home</a></li>

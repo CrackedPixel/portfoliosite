@@ -178,10 +178,6 @@ html {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-  color: white;
-}
-
 h1 {
   font-size: 3.5rem;
 }
@@ -200,8 +196,6 @@ h4 {
 }
 
 p, a {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgba(255, 255, 255, 0.6);
   font-size: 1.1rem;
   margin: 0.5rem 0;
   font-weight: 500;
@@ -213,6 +207,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 .page {
@@ -235,11 +230,45 @@ body {
   background: linear-gradient(to bottom right, purple, #4d004d);
 }
 
+.welcome h1, .welcome h2, .welcome h3, .welcome h4 {
+  color: white;
+}
+
+.welcome p, .welcome span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.welcome .socialIcon, .welcome a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.welcome .socialIcon:hover, .welcome a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.welcome .mainBtn {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.welcome .mainBtn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+          box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+}
+
+.welcome .formik__field {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
 .welcome h1 {
   position: relative;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 1.2;
   white-space: nowrap;
@@ -294,6 +323,10 @@ body {
 
 .welcome h1:hover .col1 {
   color: #46b5d1;
+}
+
+.welcome h1:hover .col2 {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 580px) {
@@ -398,6 +431,41 @@ body {
   background: linear-gradient(to bottom right, #151965, #0c0f3b);
 }
 
+.about h1, .about h2, .about h3, .about h4 {
+  color: red;
+}
+
+.about p, .about span {
+  color: rgba(255, 0, 0, 0.6);
+}
+
+.about .socialIcon, .about a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgba(255, 0, 0, 0.6);
+}
+
+.about .socialIcon:hover, .about a:hover {
+  color: rgba(255, 0, 0, 0.8);
+}
+
+.about .mainBtn {
+  color: red;
+  border-color: rgba(255, 0, 0, 0.8);
+}
+
+.about .mainBtn:hover {
+  border-color: rgba(255, 0, 0, 0.6);
+  background: rgba(255, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.4);
+          box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.4);
+}
+
+.about .formik__field {
+  color: red;
+  border-color: rgba(255, 0, 0, 0.6);
+}
+
 @media (max-width: 580px) {
   .about {
     -webkit-box-align: center;
@@ -428,6 +496,41 @@ body {
   padding: 2.8rem 10vw 5rem 10vw;
   background: -webkit-gradient(linear, left top, right bottom, from(#32407b), to(#232d57));
   background: linear-gradient(to bottom right, #32407b, #232d57);
+}
+
+.skillset h1, .skillset h2, .skillset h3, .skillset h4 {
+  color: green;
+}
+
+.skillset p, .skillset span {
+  color: rgba(0, 128, 0, 0.6);
+}
+
+.skillset .socialIcon, .skillset a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgba(0, 128, 0, 0.6);
+}
+
+.skillset .socialIcon:hover, .skillset a:hover {
+  color: rgba(0, 128, 0, 0.8);
+}
+
+.skillset .mainBtn {
+  color: green;
+  border-color: rgba(0, 128, 0, 0.8);
+}
+
+.skillset .mainBtn:hover {
+  border-color: rgba(0, 128, 0, 0.6);
+  background: rgba(0, 128, 0, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 128, 0, 0.4);
+          box-shadow: 0 0 10px 5px rgba(0, 128, 0, 0.4);
+}
+
+.skillset .formik__field {
+  color: green;
+  border-color: rgba(0, 128, 0, 0.6);
 }
 
 @media (max-width: 580px) {
@@ -467,6 +570,10 @@ body {
   background: linear-gradient(to bottom right, #515585, #3e4165);
 }
 
+.projects h3 {
+  color: blue;
+}
+
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,6 +587,10 @@ body {
   padding: 2.8rem 10vw 5rem 10vw;
   background: -webkit-gradient(linear, left top, right bottom, from(#46b5d1), to(#2d9bb7));
   background: linear-gradient(to bottom right, #46b5d1, #2d9bb7);
+}
+
+.contact h3 {
+  color: yellow;
 }
 
 .mainBtn {
@@ -539,6 +650,12 @@ body {
   margin-top: 1rem;
 }
 
+.skills__container .skill__object .skill__icon {
+  background: -webkit-gradient(linear, right top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.1)));
+  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  color: green;
+}
+
 .skills__container .skill__object {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,10 +686,8 @@ body {
 }
 
 .skills__container .skill__object .skill__icon {
-  background: white;
   border-radius: 50%;
   font-size: 2rem;
-  color: black;
   position: relative;
   left: -4rem;
   top: 3rem;
@@ -696,6 +811,41 @@ body {
   padding-left: 1rem;
 }
 
+.project__present__container .present__right h1, .project__present__container .present__right h2, .project__present__container .present__right h3, .project__present__container .present__right h4 {
+  color: blue;
+}
+
+.project__present__container .present__right p, .project__present__container .present__right span {
+  color: rgba(0, 0, 255, 0.6);
+}
+
+.project__present__container .present__right .socialIcon, .project__present__container .present__right a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgba(0, 0, 255, 0.6);
+}
+
+.project__present__container .present__right .socialIcon:hover, .project__present__container .present__right a:hover {
+  color: rgba(0, 0, 255, 0.8);
+}
+
+.project__present__container .present__right .mainBtn {
+  color: blue;
+  border-color: rgba(0, 0, 255, 0.8);
+}
+
+.project__present__container .present__right .mainBtn:hover {
+  border-color: rgba(0, 0, 255, 0.6);
+  background: rgba(0, 0, 255, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.4);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.4);
+}
+
+.project__present__container .present__right .formik__field {
+  color: blue;
+  border-color: rgba(0, 0, 255, 0.6);
+}
+
 .project__present__container .present__right h4 {
   margin: 0.2rem 0;
   font-size: 1.5rem;
@@ -710,7 +860,6 @@ body {
 .project__present__container .present__right span {
   margin-top: 2rem;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .project__present__container .present__right .present__right__links {
@@ -764,6 +913,41 @@ body {
   padding-right: 10vw;
 }
 
+.contact h1, .contact h2, .contact h3, .contact h4 {
+  color: yellow;
+}
+
+.contact p, .contact span {
+  color: rgba(255, 255, 0, 0.6);
+}
+
+.contact .socialIcon, .contact a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 0, 0.6);
+}
+
+.contact .socialIcon:hover, .contact a:hover {
+  color: rgba(255, 255, 0, 0.8);
+}
+
+.contact .mainBtn {
+  color: yellow;
+  border-color: rgba(255, 255, 0, 0.8);
+}
+
+.contact .mainBtn:hover {
+  border-color: rgba(255, 255, 0, 0.6);
+  background: rgba(255, 255, 0, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.4);
+          box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.4);
+}
+
+.contact .formik__field {
+  color: yellow;
+  border-color: rgba(255, 255, 0, 0.6);
+}
+
 .contact p {
   margin-bottom: 2rem;
 }
@@ -807,10 +991,10 @@ body {
 .contact .contact__whole__container .formik__form--container .formik__field {
   margin: 0.5rem 0;
   padding: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-width: 1px;
+  border-style: solid;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  color: white;
 }
 
 .contact .contact__whole__container .formik__form--container .formik__field[name="email"], .contact .contact__whole__container .formik__form--container .formik__field[name="name"] {
@@ -872,16 +1056,6 @@ body {
   margin-left: 0;
 }
 
-.contact .contact__whole__container .contact__mainpane .social__container a .socialIcon {
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contact .contact__whole__container .contact__mainpane .social__container a .socialIcon:hover {
-  color: white;
-}
-
 @media (max-width: 580px) {
   .contact {
     -webkit-box-align: center;
@@ -940,9 +1114,43 @@ footer {
   padding: 2rem 2rem 2rem 5vw;
 }
 
+footer h1, footer h2, footer h3, footer h4 {
+  color: white;
+}
+
+footer p, footer span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer .socialIcon, footer a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer .socialIcon:hover, footer a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer .mainBtn {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+footer .mainBtn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+          box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+}
+
+footer .formik__field {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
 footer span {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 580px) {
@@ -965,6 +1173,56 @@ header {
   background: rgba(0, 0, 0, 0.3);
   -webkit-animation: slideDown1 3s;
           animation: slideDown1 3s;
+}
+
+header.p1 nav > ul > li > a {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+header.p1 nav > ul > li > a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header.p2 nav > ul > li > a {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  color: rgba(255, 0, 0, 0.6);
+}
+
+header.p2 nav > ul > li > a:hover {
+  color: rgba(255, 0, 0, 0.8);
+}
+
+header.p3 nav > ul > li > a {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  color: rgba(0, 128, 0, 0.6);
+}
+
+header.p3 nav > ul > li > a:hover {
+  color: rgba(0, 128, 0, 0.8);
+}
+
+header.p4 nav > ul > li > a {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  color: rgba(0, 0, 255, 0.6);
+}
+
+header.p4 nav > ul > li > a:hover {
+  color: rgba(0, 0, 255, 0.8);
+}
+
+header.p5 nav > ul > li > a {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  color: rgba(255, 255, 0, 0.6);
+}
+
+header.p5 nav > ul > li > a:hover {
+  color: rgba(255, 255, 0, 0.8);
 }
 
 header nav {

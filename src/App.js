@@ -10,6 +10,8 @@ import './css/main.css';
 import { Footer } from './Components/Footer';
 
 function App() {
+
+  console.log("RENDER");
   return (
     <div className="App">
       <HeaderNav />
