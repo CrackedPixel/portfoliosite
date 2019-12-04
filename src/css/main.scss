@@ -62,13 +62,15 @@ body {
     align-self: flex-end;
     animation: slideRight1 3s;
     text-align: right;
+    margin-right: 2vw;
+
     a {
       font-size: 3.3vw;
     }
   }
 
   .mainBtn {
-    margin-top: 5vw;
+    margin: 2vw 2vw 0 0;
     width: 32vw;
     height: 7.5vw;
     font-size: 3.3vw;
