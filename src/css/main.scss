@@ -606,41 +606,12 @@ header {
   width: 100%;
   position: fixed;
   padding: 0.9rem;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   animation: slideDown1 3s;
-
-  $colorShiftSpeed: 1s;
-
-  &.p1 {
-    nav > ul > li > a {
-      @include anchorColour($font-header-page1, $colorShiftSpeed);
-    }
+  
+  nav > ul > li {
+    @include pageColour($font-page1, $font-lighten--dark);
   }
-
-  &.p2 {
-    nav > ul > li > a {
-      @include anchorColour($font-header-page2, $colorShiftSpeed);
-    }
-  }
-
-  &.p3 {
-    nav > ul > li > a {
-      @include anchorColour($font-header-page3, $colorShiftSpeed);
-    }
-  }
-
-  &.p4 {
-    nav > ul > li > a {
-      @include anchorColour($font-header-page4, $colorShiftSpeed);
-    }
-  }
-
-  &.p5 {
-    nav > ul > li > a {
-      @include anchorColour($font-header-page5, $colorShiftSpeed);
-    }
-  }
-
 
   nav {
     display: flex;

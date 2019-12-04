@@ -1257,59 +1257,40 @@ header {
   width: 100%;
   position: fixed;
   padding: 0.9rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-animation: slideDown1 3s;
           animation: slideDown1 3s;
 }
 
-header.p1 nav > ul > li > a {
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-  color: rgba(255, 255, 255, 0.9);
+header nav > ul > li h1, header nav > ul > li h2, header nav > ul > li h3, header nav > ul > li h4, header nav > ul > li p, header nav > ul > li span, header nav > ul > li .col1, header nav > ul > li p > a {
+  color: rgba(255, 244, 244, 0.6);
 }
 
-header.p1 nav > ul > li > a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-header.p2 nav > ul > li > a {
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-  color: rgba(34, 40, 49, 0.9);
-}
-
-header.p2 nav > ul > li > a:hover {
-  color: rgba(34, 40, 49, 0.8);
-}
-
-header.p3 nav > ul > li > a {
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+header nav > ul > li .socialIcon, header nav > ul > li a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   color: rgba(255, 244, 244, 0.9);
 }
 
-header.p3 nav > ul > li > a:hover {
+header nav > ul > li .socialIcon:hover, header nav > ul > li a:hover {
   color: rgba(255, 244, 244, 0.8);
 }
 
-header.p4 nav > ul > li > a {
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-  color: rgba(34, 40, 49, 0.9);
+header nav > ul > li .mainBtn {
+  color: #fff4f4;
+  border-color: rgba(255, 244, 244, 0.8);
 }
 
-header.p4 nav > ul > li > a:hover {
-  color: rgba(34, 40, 49, 0.8);
+header nav > ul > li .mainBtn:hover {
+  border-color: rgba(255, 244, 244, 0.6);
+  background: rgba(255, 244, 244, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(255, 244, 244, 0.4);
+          box-shadow: 0 0 10px 5px rgba(255, 244, 244, 0.4);
 }
 
-header.p5 nav > ul > li > a {
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-  color: rgba(34, 40, 49, 0.9);
-}
-
-header.p5 nav > ul > li > a:hover {
-  color: rgba(34, 40, 49, 0.8);
+header nav > ul > li .formik__field {
+  color: #fff4f4;
+  border-color: rgba(255, 244, 244, 0.6);
 }
 
 header nav {
