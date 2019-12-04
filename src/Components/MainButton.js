@@ -15,7 +15,7 @@ export const MainButton = (props) => {
   }
 
   return ( 
-  <button type={props.type} className="mainBtn" onClick={sendToPage}>
+  <button id={props.bid ? props.bid : null} type={props.type} className="mainBtn" onClick={sendToPage}>
     {props.preico ? props.preico : null}
     {props.preicon ? <i className={props.preicon + " mainBtnIcon"}></i> : null }
     <span>

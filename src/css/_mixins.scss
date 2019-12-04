@@ -12,21 +12,17 @@
 
 @mixin anchorColour($col, $nS: $hoverSpeed--url) {
   transition: all $nS ease-out;
-  color: rgba($col, $font-lighten);
+  color: rgba($col, $font-lighten--light);
 
   &:hover {
     color: rgba($col, $font-lighten--hover)
   }
 }
 
-@mixin pageColour($pageCol) {
+@mixin pageColour($pageCol, $fontOpacity) {
 
-  h1, h2, h3, h4 {
-    color: $pageCol;
-  }
-
-  p, span {
-    color: rgba($pageCol, $font-lighten);
+  h1, h2, h3, h4, p, span, .col1 {
+    color: rgba($pageCol, $fontOpacity);
   }
 
   .socialIcon, a {
@@ -38,7 +34,7 @@
     border-color: rgba($pageCol, $font-lighten--hover);
 
     &:hover {
-      border-color: rgba($pageCol, $font-lighten);
+      border-color: rgba($pageCol, $fontOpacity);
       background: rgba($pageCol, $btn-lighten--hover);
 
       // box-shadow: box-shadow: 0 0 10px 5px $btn-lighten--border;
@@ -48,7 +44,7 @@
 
   .formik__field {
     color: $pageCol;
-    border-color: rgba($pageCol, $font-lighten);
+    border-color: rgba($pageCol, $fontOpacity);
   }
 }
 
@@ -57,6 +53,50 @@
   // background: linear-gradient(to bottom right, $col, darken($col, $darkenPage));
 }
 
+
+@mixin mkBtn($width, $height, $margin, $fs, $align, $anim, $bw, $col) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: all $hoverSpeed--btn ease-out;
+  background: transparent;
+  margin: $margin;
+  width: $width;
+  height: $height;
+  font-size: $fs;
+  font-weight: $globalWeight--btn;
+  line-height: 0.6rem;
+  position: relative;
+  align-self: $align;
+  animation: $anim;
+  // padding: 1vw 1vw;
+  border-width: $bw;
+  border-radius: 3rem;
+  color: $col;
+  border-color: $col;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($col, 0.3);
+    @include btnBoxShadow(0,0,10px,5px, rgba($col, 0.5));
+
+    span {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+  }
+
+  span {
+    color: $col;
+    letter-spacing: 3px;
+  }
+
+  .mainBtnIcon {
+    font-size: $fs;
+    color: $col;
+  }
+}
 
 
 $mobile-font-header: 15vw;

@@ -5,11 +5,11 @@ export const Present = (props) => {
   return (
     <div className="project__present__container">
       <div className="present__left">
-        <button disabled={props.curImage === 0} onClick={() => props.setNewCurImage(-1)}>{"<-"}</button>
+        <button className="project_btn" disabled={props.curImage === 0} onClick={() => props.setNewCurImage(-1)}><i className="fas fa-arrow-circle-left"></i></button>
         <div className="present__preview__holder">
           <img className="present__preview__img" src={props.cp.pics[props.curImage]} alt={props.cp.title + " image " + props.curImage}/>
         </div>
-        <button disabled={props.curImage === props.cp.pics.length-1} onClick={() => props.setNewCurImage(1)}>{"->"}</button>
+        <button className="project_btn" disabled={props.curImage === props.cp.pics.length-1} onClick={() => props.setNewCurImage(1)}><i className="fas fa-arrow-circle-right"></i></button>
       </div>
       <div className="present__right">
         <h4>{props.cp.title}</h4>

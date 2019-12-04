@@ -46,9 +46,30 @@ $col-page4: #32407b;
 $col-page5: #151965;
 $col-footer: #32407b;
 
+/*
+  Fifth palette
+*/
 
-$font-darkbg-col: #f5f2d0;
-$font-lightbg-col: #35383F;
+$col-page1: #3c70a4;
+$col-page2: #d9eeec;
+$col-page3: #da9833;
+$col-page4: #64b2cd;
+$col-page5: #d9eeec;
+$col-footer: #3c70a4;
+
+/* 
+  6th palette 
+*/
+
+$col-page1: #222831;
+$col-page2: #29a19c;
+$col-page3: #393e46;
+$col-page4: #a3f7bf;
+$col-page5: #29a19c;
+$col-footer: #393e46;
+
+$font-darkbg-col: #fff4f4; //#f5f2d0;
+$font-lightbg-col: #222831; //#35383F;
 
 $hslChange: -60deg;
 $lD: 20%;
@@ -60,10 +81,10 @@ $font-page5: lighten(adjust-hue($col-page5, $hslChange), $lD);
 $font-footer: lighten(adjust-hue($col-footer, $hslChange), $lD);
 
 $font-page1: $font-darkbg-col;
-$font-page2: $font-darkbg-col;
+$font-page2: $font-lightbg-col;
 $font-page3: $font-darkbg-col;
-$font-page4: $font-darkbg-col;
-$font-page5: $font-darkbg-col;
+$font-page4: $font-lightbg-col;
+$font-page5: $font-lightbg-col;
 $font-footer: $font-darkbg-col;
 
 
@@ -75,10 +96,11 @@ $font-header-page3: $font-page3;
 $font-header-page4: $font-page4;
 $font-header-page5: $font-page5;
 
-$col--before: #fffff4;
-$col--after: #000;
+$col--before: #fff4f4;
+$col--after: #29a19c; //#000;
 
-$font-lighten: 0.6;
+$font-lighten--dark: 0.6;
+$font-lighten--light: 0.9;
 $font-lighten--hover: 0.8;
 
 $btn-lighten--hover: 0.2;
