@@ -755,6 +755,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.skills__container .skill__object:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+}
+
 .skills__container .skill__object:nth-child(1) {
   border-top-left-radius: 6px;
 }
@@ -849,6 +854,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 1rem;
+}
+
+.project__selector__container .project__selector__obj:hover {
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .project__selector__container .project__selector__obj .project__selector__img {
