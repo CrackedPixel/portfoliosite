@@ -21,7 +21,7 @@
 
 @mixin pageColour($pageCol, $fontOpacity) {
 
-  h1, h2, h3, h4, p, span, .col1 {
+  h1, h2, h3, h4, p, span, .col1, p > a {
     color: rgba($pageCol, $fontOpacity);
   }
 

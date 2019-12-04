@@ -16,17 +16,17 @@
 }
 
 @keyframes slideUp1 {
-  from {top: 100vh; }
+  from {top: 101vh; }
   to {top: 0; }
 }
 
 @keyframes slideRight1 {
-  from {left: -100vw; }
+  from {left: -101vw; }
   to {left: 0; }
 }
 
 @keyframes slideLeftH1 {
-  from {left: 110vw;}
+  from {left: 101vw;}
   to {left: 0;}
 }
 
@@ -34,6 +34,13 @@
   0% { top: -4rem; }
   50% {top: -4rem; }
   100% { top: 0; }
+}
+
+@keyframes expandLetters {
+  0% { letter-spacing: 0; }
+  20% { letter-spacing: 0; }
+  50% { letter-spacing: -5vw; }
+  100% { letter-spacing: 0; }
 }
 
 $hoverSpeed--url: 0.3s;
