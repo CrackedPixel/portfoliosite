@@ -9,6 +9,15 @@ body {
   font-size: 62.5%;
 }
 
+/* 
+  First palette
+ */
+/*
+  Second palette
+*/
+/* 
+  Third palette
+*/
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -17,12 +26,35 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes fadein {
   from {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeindelay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeindelay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -87,6 +119,24 @@ body {
   }
 }
 
+@-webkit-keyframes slideLeftH1 {
+  from {
+    left: 110vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideLeftH1 {
+  from {
+    left: 110vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
 @-webkit-keyframes slideDown1 {
   0% {
     top: -4rem;
@@ -125,10 +175,15 @@ html {
           flex-flow: column nowrap;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
   color: white;
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 h2 {
@@ -149,6 +204,7 @@ p, a {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.1rem;
   margin: 0.5rem 0;
+  font-weight: 500;
 }
 
 body {
@@ -177,6 +233,66 @@ body {
   padding: 5rem;
   background: -webkit-gradient(linear, left top, right bottom, from(purple), to(#4d004d));
   background: linear-gradient(to bottom right, purple, #4d004d);
+}
+
+.welcome h1 {
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  -webkit-animation: slideLeftH1 3s;
+          animation: slideLeftH1 3s;
+}
+
+.welcome h1 .col1, .welcome h1 .col2 {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  -webkit-animation: fadein 12s;
+          animation: fadein 12s;
+}
+
+.welcome h1:after, .welcome h1:before {
+  content: " ";
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  -webkit-transition-duration: .7s;
+          transition-duration: .7s;
+  border: 0 solid #fff;
+  opacity: 0.7;
+  pointer-events: none;
+  -webkit-animation: fadeindelay 6s;
+          animation: fadeindelay 6s;
+}
+
+.welcome h1:after {
+  z-index: 1;
+  border-right-width: 0.75rem;
+  border-top-width: 0.5rem;
+  border-right-color: #000;
+  border-top-color: #000;
+  right: -2rem;
+  top: -1rem;
+}
+
+.welcome h1:before {
+  z-index: 2;
+  border-bottom-width: 0.5rem;
+  border-left-width: 0.75rem;
+  bottom: -1rem;
+  left: -2rem;
+}
+
+.welcome h1:hover:after, .welcome h1:hover:before {
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome h1:hover .col1 {
+  color: #46b5d1;
 }
 
 .welcome h2 {
@@ -227,8 +343,8 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#5e42a6), to(#493382));
-  background: linear-gradient(to bottom right, #5e42a6, #493382);
+  background: -webkit-gradient(linear, left top, right bottom, from(#151965), to(#0c0f3b));
+  background: linear-gradient(to bottom right, #151965, #0c0f3b);
 }
 
 @media (max-width: 580px) {
@@ -259,8 +375,8 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#b74e91), to(#953d75));
-  background: linear-gradient(to bottom right, #b74e91, #953d75);
+  background: -webkit-gradient(linear, left top, right bottom, from(#32407b), to(#232d57));
+  background: linear-gradient(to bottom right, #32407b, #232d57);
 }
 
 @media (max-width: 580px) {
@@ -296,8 +412,8 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#5e42a6), to(#493382));
-  background: linear-gradient(to bottom right, #5e42a6, #493382);
+  background: -webkit-gradient(linear, left top, right bottom, from(#515585), to(#3e4165));
+  background: linear-gradient(to bottom right, #515585, #3e4165);
 }
 
 .contact {
@@ -311,8 +427,8 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(purple), to(#4d004d));
-  background: linear-gradient(to bottom right, purple, #4d004d);
+  background: -webkit-gradient(linear, left top, right bottom, from(#46b5d1), to(#2d9bb7));
+  background: linear-gradient(to bottom right, #46b5d1, #2d9bb7);
 }
 
 .mainBtn {
@@ -788,6 +904,7 @@ footer span {
 }
 
 header {
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
