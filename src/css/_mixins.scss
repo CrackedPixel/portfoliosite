@@ -52,8 +52,9 @@
   }
 }
 
-@mixin lightenHSL($hsl) {
-  
+@mixin pageBG($col) {
+  background: $col;
+  // background: linear-gradient(to bottom right, $col, darken($col, $darkenPage));
 }
 
 

@@ -4,6 +4,10 @@
 @import "mixins";
 @import "keyframes";
 
+$globalWeight: 300;
+$globalWeight--header: 500;
+$globalWeight--btn: 400;
+
 html {
   scroll-behavior: smooth;
 }
@@ -32,7 +36,7 @@ p, a {
   // color: $col-text_main;
   font-size: 1.1rem;
   margin: 0.5rem 0;
-  font-weight: 500;
+  font-weight: $globalWeight;
 }
 
 body {
@@ -63,11 +67,11 @@ body {
     animation: slideRight1 3s;
     text-align: right;
     margin-right: 2vw;
-    font-weight: 350;
+    font-weight: $globalWeight;
 
     a {
       font-size: 3.3vw;
-      font-weight: 350;
+      font-weight: $globalWeight;
     }
   }
 
@@ -91,7 +95,7 @@ body {
     margin: 3rem 0 2rem 0;
     position: relative;
     align-self: center;
-    font-weight: 500;
+    font-weight: $globalWeight--header;
     font-size: 11vw;
     line-height: 1.2;
     white-space: nowrap;
@@ -215,7 +219,8 @@ body {
 
   
 
-  background: linear-gradient(to bottom right, $col-page1, darken($col-page1, 10%));
+  background: linear-gradient(to bottom right, $col-page1, darken($col-page1, $darkenPage));
+  // @include pageBG($col-page1);
 
   @media #{$mobile-s}{
     align-items: center;
@@ -244,7 +249,8 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
 .about {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
-  background: linear-gradient(to bottom right, $col-page2, darken($col-page2, 10%));
+  // background: linear-gradient(to bottom right, $col-page2, darken($col-page2, $darkenPage));
+  @include pageBG($col-page2);
 
   // Colours 
   @include pageColour($font-page2);
@@ -267,7 +273,8 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
 .skillset {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
-  background: linear-gradient(to bottom right, $col-page3, darken($col-page3, 10%));
+  // background: linear-gradient(to bottom right, $col-page3, darken($col-page3, $darkenPage));
+  @include pageBG($col-page3);
 
   // Colours
   @include pageColour($font-page3);
@@ -294,7 +301,8 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
 .projects {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
-  background: linear-gradient(to bottom right, $col-page4, darken($col-page4, 10%));
+  // background: linear-gradient(to bottom right, $col-page4, darken($col-page4, $darkenPage));
+  @include pageBG($col-page4);
 
   h3 {
     color: $font-page4;
@@ -303,7 +311,8 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
 .contact {
   @include displayFlex(column nowrap, 100%, unset, 0, $pagePad);
-  background: linear-gradient(to bottom right, $col-page5, darken($col-page5, 10%));
+  // background: linear-gradient(to bottom right, $col-page5, darken($col-page5, $darkenPage));
+  @include pageBG($col-page5);
 
   h3 {
     color: $font-page5;
@@ -324,7 +333,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   color: $white;
   text-transform: uppercase;
   font-size: 0.6rem;
-  font-weight: bold;
+  font-weight: $globalWeight--btn;
   line-height: 0.6rem;
 
   &:hover {

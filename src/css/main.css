@@ -197,7 +197,7 @@ h4 {
 p, a {
   font-size: 1.1rem;
   margin: 0.5rem 0;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 body {
@@ -282,12 +282,12 @@ body {
           animation: slideRight1 3s;
   text-align: right;
   margin-right: 2vw;
-  font-weight: 350;
+  font-weight: 300;
 }
 
 .welcome p a {
   font-size: 3.3vw;
-  font-weight: 350;
+  font-weight: 300;
 }
 
 .welcome .mainBtn {
@@ -360,8 +360,8 @@ body {
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   border-left-width: 1.1vw;
-  border-bottom-color: #d5b2d5;
-  border-left-color: #d5b2d5;
+  border-bottom-color: #fffff4;
+  border-left-color: #fffff4;
   bottom: -1rem;
   left: -2rem;
 }
@@ -457,8 +457,7 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#32407b), to(#232d57));
-  background: linear-gradient(to bottom right, #32407b, #232d57);
+  background: #32407b;
 }
 
 .about h1, .about h2, .about h3, .about h4 {
@@ -524,8 +523,7 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#515585), to(#3e4165));
-  background: linear-gradient(to bottom right, #515585, #3e4165);
+  background: #515585;
 }
 
 .skillset h1, .skillset h2, .skillset h3, .skillset h4 {
@@ -596,8 +594,7 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#32407b), to(#232d57));
-  background: linear-gradient(to bottom right, #32407b, #232d57);
+  background: #32407b;
 }
 
 .projects h3 {
@@ -615,8 +612,7 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#151965), to(#0c0f3b));
-  background: linear-gradient(to bottom right, #151965, #0c0f3b);
+  background: #151965;
 }
 
 .contact h3 {
@@ -644,7 +640,7 @@ body {
   color: white;
   text-transform: uppercase;
   font-size: 0.6rem;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 0.6rem;
 }
 
