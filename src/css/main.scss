@@ -54,7 +54,7 @@ body {
 }
 
 .welcome {
-  @include displayFlex(column nowrap, 100%, 100vh, 0, 5rem);
+  @include displayFlex(column nowrap, 100%, 100vh, 0, 5rem 5vw 5rem 5vw);
 
   h1 {
     position: relative;
@@ -64,16 +64,12 @@ body {
     line-height: 1.2;
     white-space: nowrap;
     animation: slideLeftH1 3s;
+    margin-bottom: 2rem;
 
     .col1, .col2 {
       transition: color 0.5s;
       animation: fadein 12s;
     }
-
-    .col2 {
-
-    }
-    // text-transform: uppercase;
 
     &:after, &:before {
       content: " ";
@@ -115,9 +111,53 @@ body {
       .col1 {
         color: $col-page5;
       }
+    }
 
-      .col2 {
-        // color: $col-page4;
+    @media #{$mobile-s} {
+      align-self: center;
+      font-size: 10vw;
+
+      &:after, &:before {
+        height: 7vh;
+        width: 15vw;
+      }
+
+      &:after {
+        border-right-width: 2vw;
+        border-top-width: 1.5vw;
+        right: -4vw;
+        top: -2vw;
+      }
+
+      &:before {
+        border-bottom-width: 2vw;
+        border-left-width: 1.5vw;
+        left: -4vw;
+        bottom: -2.5vw;
+      }
+    }
+
+    @media #{$mobile-m} {
+      align-self: center;
+      font-size: 10vw;
+
+      &:after, &:before {
+        height: 10vh;
+        width: 15vw;
+      }
+      
+      &:after {
+        border-right-width: 2vw;
+        border-top-width: 1.5vw;
+        right: -4vw;
+        top: -2vw;
+      }
+
+      &:before {
+        border-bottom-width: 2vw;
+        border-left-width: 1.5vw;
+        left: -4vw;
+        bottom: -2.5vw;
       }
     }
   }

@@ -230,7 +230,7 @@ body {
           flex-flow: column nowrap;
   min-height: 100vh;
   width: 100%;
-  padding: 5rem;
+  padding: 5rem 5vw 5rem 5vw;
   background: -webkit-gradient(linear, left top, right bottom, from(purple), to(#4d004d));
   background: linear-gradient(to bottom right, purple, #4d004d);
 }
@@ -245,6 +245,7 @@ body {
   white-space: nowrap;
   -webkit-animation: slideLeftH1 3s;
           animation: slideLeftH1 3s;
+  margin-bottom: 2rem;
 }
 
 .welcome h1 .col1, .welcome h1 .col2 {
@@ -293,6 +294,56 @@ body {
 
 .welcome h1:hover .col1 {
   color: #46b5d1;
+}
+
+@media (max-width: 580px) {
+  .welcome h1 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 10vw;
+  }
+  .welcome h1:after, .welcome h1:before {
+    height: 7vh;
+    width: 15vw;
+  }
+  .welcome h1:after {
+    border-right-width: 2vw;
+    border-top-width: 1.5vw;
+    right: -4vw;
+    top: -2vw;
+  }
+  .welcome h1:before {
+    border-bottom-width: 2vw;
+    border-left-width: 1.5vw;
+    left: -4vw;
+    bottom: -2.5vw;
+  }
+}
+
+@media (min-width: 581px) and (max-width: 830px) {
+  .welcome h1 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 10vw;
+  }
+  .welcome h1:after, .welcome h1:before {
+    height: 10vh;
+    width: 15vw;
+  }
+  .welcome h1:after {
+    border-right-width: 2vw;
+    border-top-width: 1.5vw;
+    right: -4vw;
+    top: -2vw;
+  }
+  .welcome h1:before {
+    border-bottom-width: 2vw;
+    border-left-width: 1.5vw;
+    left: -4vw;
+    bottom: -2.5vw;
+  }
 }
 
 .welcome h2 {
