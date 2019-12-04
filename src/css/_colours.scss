@@ -37,13 +37,14 @@ $col-page5: #46b5d1;
 $col-footer: $col-blue1;
 
 
-$hslChange: 60deg;
+$hslChange: -60deg;
+$lD: 20%;
 $font-page1: lighten(adjust-hue($col-page1, $hslChange), 100%);
-$font-page2: lighten(adjust-hue($col-page2, $hslChange), 20%);
-$font-page3: lighten(adjust-hue($col-page3, $hslChange), 20%);
-$font-page4: lighten(adjust-hue($col-page4, $hslChange), 20%);
-$font-page5: lighten(adjust-hue($col-page5, $hslChange), 20%);
-$font-footer: lighten(adjust-hue($col-footer, $hslChange), 20%);
+$font-page2: lighten(adjust-hue($col-page2, $hslChange), $lD);
+$font-page3: lighten(adjust-hue($col-page3, $hslChange), $lD);
+$font-page4: lighten(adjust-hue($col-page4, $hslChange), $lD);
+$font-page5: lighten(adjust-hue($col-page5, $hslChange), $lD);
+$font-footer: lighten(adjust-hue($col-footer, $hslChange), $lD);
 
 
 $font-header-page1: $white;
