@@ -63,17 +63,19 @@ body {
     animation: slideRight1 3s;
     text-align: right;
     margin-right: 2vw;
+    font-weight: 350;
 
     a {
       font-size: 3.3vw;
+      font-weight: 350;
     }
   }
 
   .mainBtn {
     margin: 2vw 2vw 0 0;
-    width: 32vw;
-    height: 7.5vw;
-    font-size: 3.3vw;
+    width: 26vw;
+    height: 6.5vw;
+    font-size: 2.8vw;
     position: relative;
     align-self: flex-end;
     animation: slideRight1 3.5s;
@@ -81,7 +83,7 @@ body {
     border-width: 0.25vw;
 
     .mainBtnIcon {
-      font-size: 3.3vw;
+      font-size: 2.8vw;
     }
   }
 
@@ -100,6 +102,12 @@ body {
       animation: fadein 12s;
     }
 
+    $cssLineW: 0.5rem;
+    $cssLineH: 0.75rem;
+
+    $cssLineW: 0.8vw;
+    $cssLineH: 1.1vw;
+
     &:after, &:before {
       content: " ";
       position: absolute;
@@ -116,8 +124,8 @@ body {
     &:after {
       transition: all 0.6s;
       z-index: 1;
-      border-right-width: 0.75rem;
-      border-top-width: 0.5rem;
+      border-right-width: $cssLineH;
+      border-top-width: $cssLineW;
       border-right-color: $col--after;
       border-top-color: $col--after;
       right: -2rem;
@@ -127,9 +135,9 @@ body {
     &:before {
       z-index: 2;
       opacity: 1;
-      border-bottom-width: 0.5rem;
+      border-bottom-width: $cssLineW;
       transition: all 0.8s;
-      border-left-width: 0.75rem;
+      border-left-width: $cssLineH;
       border-bottom-color: $col--before;
       border-left-color: $col--before;
       bottom: -1rem;
@@ -148,11 +156,11 @@ body {
       }
 
       .col1 {
-        color: $col-page5;
+        // color: lighten($col-page1, 30%);
       }
 
       .col2 {
-        color: $btn-col1;
+        color: rgba($font-page1, 0.2);
       }
     }
 
@@ -585,6 +593,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
       .formik__field[name="message"] {
         height: 6rem;
+        max-width: 100%;
       }
 
       .error.error-message {

@@ -18,6 +18,9 @@ body {
 /* 
   Third palette
 */
+/* 
+  Fourth Palette
+*/
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -225,43 +228,43 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: -webkit-gradient(linear, left top, right bottom, from(purple), to(#4d004d));
-  background: linear-gradient(to bottom right, purple, #4d004d);
+  background: -webkit-gradient(linear, left top, right bottom, from(#151965), to(#0c0f3b));
+  background: linear-gradient(to bottom right, #151965, #0c0f3b);
 }
 
 .welcome h1, .welcome h2, .welcome h3, .welcome h4 {
-  color: white;
+  color: #f5f2d0;
 }
 
 .welcome p, .welcome span {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .welcome .socialIcon, .welcome a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .welcome .socialIcon:hover, .welcome a:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 .welcome .mainBtn {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.8);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.8);
 }
 
 .welcome .mainBtn:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
-          box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+  border-color: rgba(245, 242, 208, 0.6);
+  background: rgba(245, 242, 208, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
+          box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
 }
 
 .welcome .formik__field {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.6);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.6);
 }
 
 .welcome h2 {
@@ -279,17 +282,19 @@ body {
           animation: slideRight1 3s;
   text-align: right;
   margin-right: 2vw;
+  font-weight: 350;
 }
 
 .welcome p a {
   font-size: 3.3vw;
+  font-weight: 350;
 }
 
 .welcome .mainBtn {
   margin: 2vw 2vw 0 0;
-  width: 32vw;
-  height: 7.5vw;
-  font-size: 3.3vw;
+  width: 26vw;
+  height: 6.5vw;
+  font-size: 2.8vw;
   position: relative;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -299,7 +304,7 @@ body {
 }
 
 .welcome .mainBtn .mainBtnIcon {
-  font-size: 3.3vw;
+  font-size: 2.8vw;
 }
 
 .welcome h1 {
@@ -340,8 +345,8 @@ body {
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
   z-index: 1;
-  border-right-width: 0.75rem;
-  border-top-width: 0.5rem;
+  border-right-width: 1.1vw;
+  border-top-width: 0.8vw;
   border-right-color: #000;
   border-top-color: #000;
   right: -2rem;
@@ -351,10 +356,10 @@ body {
 .welcome h1:before {
   z-index: 2;
   opacity: 1;
-  border-bottom-width: 0.5rem;
+  border-bottom-width: 0.8vw;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
-  border-left-width: 0.75rem;
+  border-left-width: 1.1vw;
   border-bottom-color: #d5b2d5;
   border-left-color: #d5b2d5;
   bottom: -1rem;
@@ -370,12 +375,8 @@ body {
   width: 100vw;
 }
 
-.welcome h1:hover .col1 {
-  color: #46b5d1;
-}
-
 .welcome h1:hover .col2 {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(245, 242, 208, 0.2);
 }
 
 @media (max-width: 580px) {
@@ -456,43 +457,43 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#151965), to(#0c0f3b));
-  background: linear-gradient(to bottom right, #151965, #0c0f3b);
+  background: -webkit-gradient(linear, left top, right bottom, from(#32407b), to(#232d57));
+  background: linear-gradient(to bottom right, #32407b, #232d57);
 }
 
 .about h1, .about h2, .about h3, .about h4 {
-  color: #27b9b2;
+  color: #f5f2d0;
 }
 
 .about p, .about span {
-  color: rgba(39, 185, 178, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .about .socialIcon, .about a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(39, 185, 178, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .about .socialIcon:hover, .about a:hover {
-  color: rgba(39, 185, 178, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 .about .mainBtn {
-  color: #27b9b2;
-  border-color: rgba(39, 185, 178, 0.8);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.8);
 }
 
 .about .mainBtn:hover {
-  border-color: rgba(39, 185, 178, 0.6);
-  background: rgba(39, 185, 178, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(39, 185, 178, 0.4);
-          box-shadow: 0 0 10px 5px rgba(39, 185, 178, 0.4);
+  border-color: rgba(245, 242, 208, 0.6);
+  background: rgba(245, 242, 208, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
+          box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
 }
 
 .about .formik__field {
-  color: #27b9b2;
-  border-color: rgba(39, 185, 178, 0.6);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.6);
 }
 
 @media (max-width: 580px) {
@@ -523,43 +524,43 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#32407b), to(#232d57));
-  background: linear-gradient(to bottom right, #32407b, #232d57);
+  background: -webkit-gradient(linear, left top, right bottom, from(#515585), to(#3e4165));
+  background: linear-gradient(to bottom right, #515585, #3e4165);
 }
 
 .skillset h1, .skillset h2, .skillset h3, .skillset h4 {
-  color: #58bba8;
+  color: #f5f2d0;
 }
 
 .skillset p, .skillset span {
-  color: rgba(88, 187, 168, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .skillset .socialIcon, .skillset a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(88, 187, 168, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .skillset .socialIcon:hover, .skillset a:hover {
-  color: rgba(88, 187, 168, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 .skillset .mainBtn {
-  color: #58bba8;
-  border-color: rgba(88, 187, 168, 0.8);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.8);
 }
 
 .skillset .mainBtn:hover {
-  border-color: rgba(88, 187, 168, 0.6);
-  background: rgba(88, 187, 168, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(88, 187, 168, 0.4);
-          box-shadow: 0 0 10px 5px rgba(88, 187, 168, 0.4);
+  border-color: rgba(245, 242, 208, 0.6);
+  background: rgba(245, 242, 208, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
+          box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
 }
 
 .skillset .formik__field {
-  color: #58bba8;
-  border-color: rgba(88, 187, 168, 0.6);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.6);
 }
 
 @media (max-width: 580px) {
@@ -595,12 +596,12 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#515585), to(#3e4165));
-  background: linear-gradient(to bottom right, #515585, #3e4165);
+  background: -webkit-gradient(linear, left top, right bottom, from(#32407b), to(#232d57));
+  background: linear-gradient(to bottom right, #32407b, #232d57);
 }
 
 .projects h3 {
-  color: #86b6b2;
+  color: #f5f2d0;
 }
 
 .contact {
@@ -614,12 +615,12 @@ body {
   min-height: unset;
   width: 100%;
   padding: 2.8rem 10vw 5rem 10vw;
-  background: -webkit-gradient(linear, left top, right bottom, from(#46b5d1), to(#2d9bb7));
-  background: linear-gradient(to bottom right, #46b5d1, #2d9bb7);
+  background: -webkit-gradient(linear, left top, right bottom, from(#151965), to(#0c0f3b));
+  background: linear-gradient(to bottom right, #151965, #0c0f3b);
 }
 
 .contact h3 {
-  color: #98e5a7;
+  color: #f5f2d0;
 }
 
 .mainBtn {
@@ -682,7 +683,7 @@ body {
 .skills__container .skill__object .skill__icon {
   background: -webkit-gradient(linear, right top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.1)));
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
-  color: #58bba8;
+  color: #f5f2d0;
 }
 
 .skills__container .skill__object {
@@ -841,38 +842,38 @@ body {
 }
 
 .project__present__container .present__right h1, .project__present__container .present__right h2, .project__present__container .present__right h3, .project__present__container .present__right h4 {
-  color: #86b6b2;
+  color: #f5f2d0;
 }
 
 .project__present__container .present__right p, .project__present__container .present__right span {
-  color: rgba(134, 182, 178, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .project__present__container .present__right .socialIcon, .project__present__container .present__right a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(134, 182, 178, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .project__present__container .present__right .socialIcon:hover, .project__present__container .present__right a:hover {
-  color: rgba(134, 182, 178, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 .project__present__container .present__right .mainBtn {
-  color: #86b6b2;
-  border-color: rgba(134, 182, 178, 0.8);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.8);
 }
 
 .project__present__container .present__right .mainBtn:hover {
-  border-color: rgba(134, 182, 178, 0.6);
-  background: rgba(134, 182, 178, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(134, 182, 178, 0.4);
-          box-shadow: 0 0 10px 5px rgba(134, 182, 178, 0.4);
+  border-color: rgba(245, 242, 208, 0.6);
+  background: rgba(245, 242, 208, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
+          box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
 }
 
 .project__present__container .present__right .formik__field {
-  color: #86b6b2;
-  border-color: rgba(134, 182, 178, 0.6);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.6);
 }
 
 .project__present__container .present__right h4 {
@@ -943,38 +944,38 @@ body {
 }
 
 .contact h1, .contact h2, .contact h3, .contact h4 {
-  color: #98e5a7;
+  color: #f5f2d0;
 }
 
 .contact p, .contact span {
-  color: rgba(152, 229, 167, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .contact .socialIcon, .contact a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(152, 229, 167, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 .contact .socialIcon:hover, .contact a:hover {
-  color: rgba(152, 229, 167, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 .contact .mainBtn {
-  color: #98e5a7;
-  border-color: rgba(152, 229, 167, 0.8);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.8);
 }
 
 .contact .mainBtn:hover {
-  border-color: rgba(152, 229, 167, 0.6);
-  background: rgba(152, 229, 167, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(152, 229, 167, 0.4);
-          box-shadow: 0 0 10px 5px rgba(152, 229, 167, 0.4);
+  border-color: rgba(245, 242, 208, 0.6);
+  background: rgba(245, 242, 208, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
+          box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
 }
 
 .contact .formik__field {
-  color: #98e5a7;
-  border-color: rgba(152, 229, 167, 0.6);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.6);
 }
 
 .contact p {
@@ -1032,6 +1033,7 @@ body {
 
 .contact .contact__whole__container .formik__form--container .formik__field[name="message"] {
   height: 6rem;
+  max-width: 100%;
 }
 
 .contact .contact__whole__container .formik__form--container .error.error-message {
@@ -1139,43 +1141,43 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  background: #5e42a6;
+  background: #32407b;
   padding: 2rem 2rem 2rem 5vw;
 }
 
 footer h1, footer h2, footer h3, footer h4 {
-  color: #81b8cd;
+  color: #f5f2d0;
 }
 
 footer p, footer span {
-  color: rgba(129, 184, 205, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 footer .socialIcon, footer a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(129, 184, 205, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 footer .socialIcon:hover, footer a:hover {
-  color: rgba(129, 184, 205, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 footer .mainBtn {
-  color: #81b8cd;
-  border-color: rgba(129, 184, 205, 0.8);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.8);
 }
 
 footer .mainBtn:hover {
-  border-color: rgba(129, 184, 205, 0.6);
-  background: rgba(129, 184, 205, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(129, 184, 205, 0.4);
-          box-shadow: 0 0 10px 5px rgba(129, 184, 205, 0.4);
+  border-color: rgba(245, 242, 208, 0.6);
+  background: rgba(245, 242, 208, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
+          box-shadow: 0 0 10px 5px rgba(245, 242, 208, 0.4);
 }
 
 footer .formik__field {
-  color: #81b8cd;
-  border-color: rgba(129, 184, 205, 0.6);
+  color: #f5f2d0;
+  border-color: rgba(245, 242, 208, 0.6);
 }
 
 footer span {
@@ -1217,41 +1219,41 @@ header.p1 nav > ul > li > a:hover {
 header.p2 nav > ul > li > a {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  color: rgba(39, 185, 178, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 header.p2 nav > ul > li > a:hover {
-  color: rgba(39, 185, 178, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 header.p3 nav > ul > li > a {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  color: rgba(88, 187, 168, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 header.p3 nav > ul > li > a:hover {
-  color: rgba(88, 187, 168, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 header.p4 nav > ul > li > a {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  color: rgba(134, 182, 178, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 header.p4 nav > ul > li > a:hover {
-  color: rgba(134, 182, 178, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 header.p5 nav > ul > li > a {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  color: rgba(152, 229, 167, 0.6);
+  color: rgba(245, 242, 208, 0.6);
 }
 
 header.p5 nav > ul > li > a:hover {
-  color: rgba(152, 229, 167, 0.8);
+  color: rgba(245, 242, 208, 0.8);
 }
 
 header nav {

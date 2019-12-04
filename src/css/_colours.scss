@@ -36,6 +36,19 @@ $col-page4: #515585;
 $col-page5: #46b5d1;
 $col-footer: $col-blue1;
 
+/* 
+  Fourth Palette
+*/
+$col-page1: #151965;
+$col-page2: #32407b;
+$col-page3: #515585;
+$col-page4: #32407b;
+$col-page5: #151965;
+$col-footer: #32407b;
+
+
+$font-darkbg-col: #f5f2d0;
+$font-lightbg-col: #35383F;
 
 $hslChange: -60deg;
 $lD: 20%;
@@ -45,6 +58,15 @@ $font-page3: lighten(adjust-hue($col-page3, $hslChange), $lD);
 $font-page4: lighten(adjust-hue($col-page4, $hslChange), $lD);
 $font-page5: lighten(adjust-hue($col-page5, $hslChange), $lD);
 $font-footer: lighten(adjust-hue($col-footer, $hslChange), $lD);
+
+$font-page1: $font-darkbg-col;
+$font-page2: $font-darkbg-col;
+$font-page3: $font-darkbg-col;
+$font-page4: $font-darkbg-col;
+$font-page5: $font-darkbg-col;
+$font-footer: $font-darkbg-col;
+
+
 
 
 $font-header-page1: $white;
