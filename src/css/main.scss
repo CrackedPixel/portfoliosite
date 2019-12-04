@@ -233,7 +233,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   
   .mainBtnIcon {
     font-size: 1rem;
-    margin: 0 0.4rem;
+    margin: 0 1vw;
   }
 
 }
@@ -619,6 +619,10 @@ header {
   
   nav > ul > li {
     @include pageColour($font-page1, $font-lighten--dark);
+    a {
+      text-underline-offset: 5px;
+      font-size: 1.5vw;
+    }
   }
 
   nav {
@@ -634,7 +638,31 @@ header {
 
       li {
         list-style-type: none;
-        margin: 0 1rem;
+        margin: 0 1vw;
+      }
+    }
+  }
+
+  @media #{$mobile-s} {
+    nav {
+      ul {
+        justify-content: space-around;
+
+        li > a {
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+
+  @media #{$mobile-m} {
+    nav {
+      ul {
+        justify-content: space-around;
+
+        li > a {
+          font-size: 3vw;
+        }
       }
     }
   }
