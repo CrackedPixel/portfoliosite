@@ -34,14 +34,16 @@ $col-page2: #151965;
 $col-page3: #32407b;
 $col-page4: #515585;
 $col-page5: #46b5d1;
-$font-footer: white;
+$col-footer: $col-blue1;
 
-$font-page1: $white;
-$font-page2: red;
-$font-page3: green;
-$font-page4: blue;
-$font-page5: yellow;
-$font-footer: white;
+
+$hslChange: 60deg;
+$font-page1: lighten(adjust-hue($col-page1, $hslChange), 100%);
+$font-page2: lighten(adjust-hue($col-page2, $hslChange), 20%);
+$font-page3: lighten(adjust-hue($col-page3, $hslChange), 20%);
+$font-page4: lighten(adjust-hue($col-page4, $hslChange), 20%);
+$font-page5: lighten(adjust-hue($col-page5, $hslChange), 20%);
+$font-footer: lighten(adjust-hue($col-footer, $hslChange), 20%);
 
 
 $font-header-page1: $white;
@@ -49,6 +51,9 @@ $font-header-page2: $font-page2;
 $font-header-page3: $font-page3;
 $font-header-page4: $font-page4;
 $font-header-page5: $font-page5;
+
+$col--before: #d5b2d5;
+$col--after: #000;
 
 $font-lighten: 0.6;
 $font-lighten--hover: 0.8;
@@ -65,5 +70,3 @@ $col-text_footer: rgba(255,255,255,0.2);
 $btn-col1: rgba(255,255,255,0.4);
 $btn-col2: rgba(255,255,255,0.2);
 $btn-col3: rgba(255,255,255,0.1);
-
-$footer-bg: $col-blue1;

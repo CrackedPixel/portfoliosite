@@ -178,10 +178,6 @@ html {
   overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.5rem;
-}
-
 h2 {
   font-size: 3rem;
 }
@@ -226,6 +222,9 @@ body {
   min-height: 100vh;
   width: 100%;
   padding: 5rem 5vw 5rem 5vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: -webkit-gradient(linear, left top, right bottom, from(purple), to(#4d004d));
   background: linear-gradient(to bottom right, purple, #4d004d);
 }
@@ -265,16 +264,55 @@ body {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-.welcome h1 {
+.welcome h2 {
+  position: relative;
+  -webkit-animation: slideUp1 2s;
+          animation: slideUp1 2s;
+}
+
+.welcome p {
+  position: relative;
+  font-size: 3.3vw;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-animation: slideRight1 3s;
+          animation: slideRight1 3s;
+  text-align: right;
+}
+
+.welcome p a {
+  font-size: 3.3vw;
+}
+
+.welcome .mainBtn {
+  margin-top: 5vw;
+  width: 32vw;
+  height: 7.5vw;
+  font-size: 3.3vw;
   position: relative;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-animation: slideRight1 3.5s;
+          animation: slideRight1 3.5s;
+  border-width: 0.25vw;
+}
+
+.welcome .mainBtn .mainBtnIcon {
+  font-size: 3.3vw;
+}
+
+.welcome h1 {
+  margin: 3rem 0 2rem 0;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-weight: 500;
+  font-size: 11vw;
   line-height: 1.2;
   white-space: nowrap;
   -webkit-animation: slideLeftH1 3s;
           animation: slideLeftH1 3s;
-  margin-bottom: 2rem;
 }
 
 .welcome h1 .col1, .welcome h1 .col2 {
@@ -284,14 +322,33 @@ body {
           animation: fadein 12s;
 }
 
+.welcome h1 .bef:before {
+  content: " ";
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  position: absolute;
+  height: 13vw;
+  width: 12vw;
+  border: 0;
+  border-style: solid;
+  opacity: 1;
+  pointer-events: none;
+  -webkit-animation: fadeindelay 6s;
+          animation: fadeindelay 6s;
+  z-index: 0;
+  border-bottom-width: 0.5rem;
+  border-bottom-color: #d5b2d5;
+  bottom: -1rem;
+  left: -1.3rem;
+}
+
 .welcome h1:after, .welcome h1:before {
   content: " ";
   position: absolute;
-  height: 5rem;
-  width: 5rem;
-  -webkit-transition-duration: .7s;
-          transition-duration: .7s;
-  border: 0 solid #fff;
+  height: 13vw;
+  width: 12vw;
+  border: 0;
+  border-style: solid;
   opacity: 0.7;
   pointer-events: none;
   -webkit-animation: fadeindelay 6s;
@@ -299,6 +356,8 @@ body {
 }
 
 .welcome h1:after {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
   z-index: 1;
   border-right-width: 0.75rem;
   border-top-width: 0.5rem;
@@ -310,8 +369,11 @@ body {
 
 .welcome h1:before {
   z-index: 2;
-  border-bottom-width: 0.5rem;
+  opacity: 1;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
   border-left-width: 0.75rem;
+  border-left-color: #d5b2d5;
   bottom: -1rem;
   left: -2rem;
 }
@@ -319,6 +381,10 @@ body {
 .welcome h1:hover:after, .welcome h1:hover:before {
   width: 100vw;
   height: 100vh;
+}
+
+.welcome h1:hover .bef:before {
+  width: 100vw;
 }
 
 .welcome h1:hover .col1 {
@@ -347,7 +413,6 @@ body {
     top: -2vw;
   }
   .welcome h1:before {
-    border-bottom-width: 2vw;
     border-left-width: 1.5vw;
     left: -4vw;
     bottom: -2.5vw;
@@ -372,29 +437,10 @@ body {
     top: -2vw;
   }
   .welcome h1:before {
-    border-bottom-width: 2vw;
     border-left-width: 1.5vw;
     left: -4vw;
     bottom: -2.5vw;
   }
-}
-
-.welcome h2 {
-  position: relative;
-  -webkit-animation: slideUp1 2s;
-          animation: slideUp1 2s;
-}
-
-.welcome p {
-  position: relative;
-  -webkit-animation: slideRight1 3s;
-          animation: slideRight1 3s;
-}
-
-.welcome .mainBtn {
-  position: relative;
-  -webkit-animation: slideRight1 3.5s;
-          animation: slideRight1 3.5s;
 }
 
 @media (max-width: 580px) {
@@ -432,38 +478,38 @@ body {
 }
 
 .about h1, .about h2, .about h3, .about h4 {
-  color: red;
+  color: #b227b9;
 }
 
 .about p, .about span {
-  color: rgba(255, 0, 0, 0.6);
+  color: rgba(178, 39, 185, 0.6);
 }
 
 .about .socialIcon, .about a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(255, 0, 0, 0.6);
+  color: rgba(178, 39, 185, 0.6);
 }
 
 .about .socialIcon:hover, .about a:hover {
-  color: rgba(255, 0, 0, 0.8);
+  color: rgba(178, 39, 185, 0.8);
 }
 
 .about .mainBtn {
-  color: red;
-  border-color: rgba(255, 0, 0, 0.8);
+  color: #b227b9;
+  border-color: rgba(178, 39, 185, 0.8);
 }
 
 .about .mainBtn:hover {
-  border-color: rgba(255, 0, 0, 0.6);
-  background: rgba(255, 0, 0, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.4);
-          box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.4);
+  border-color: rgba(178, 39, 185, 0.6);
+  background: rgba(178, 39, 185, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(178, 39, 185, 0.4);
+          box-shadow: 0 0 10px 5px rgba(178, 39, 185, 0.4);
 }
 
 .about .formik__field {
-  color: red;
-  border-color: rgba(255, 0, 0, 0.6);
+  color: #b227b9;
+  border-color: rgba(178, 39, 185, 0.6);
 }
 
 @media (max-width: 580px) {
@@ -499,38 +545,38 @@ body {
 }
 
 .skillset h1, .skillset h2, .skillset h3, .skillset h4 {
-  color: green;
+  color: #a858bb;
 }
 
 .skillset p, .skillset span {
-  color: rgba(0, 128, 0, 0.6);
+  color: rgba(168, 88, 187, 0.6);
 }
 
 .skillset .socialIcon, .skillset a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(0, 128, 0, 0.6);
+  color: rgba(168, 88, 187, 0.6);
 }
 
 .skillset .socialIcon:hover, .skillset a:hover {
-  color: rgba(0, 128, 0, 0.8);
+  color: rgba(168, 88, 187, 0.8);
 }
 
 .skillset .mainBtn {
-  color: green;
-  border-color: rgba(0, 128, 0, 0.8);
+  color: #a858bb;
+  border-color: rgba(168, 88, 187, 0.8);
 }
 
 .skillset .mainBtn:hover {
-  border-color: rgba(0, 128, 0, 0.6);
-  background: rgba(0, 128, 0, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(0, 128, 0, 0.4);
-          box-shadow: 0 0 10px 5px rgba(0, 128, 0, 0.4);
+  border-color: rgba(168, 88, 187, 0.6);
+  background: rgba(168, 88, 187, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(168, 88, 187, 0.4);
+          box-shadow: 0 0 10px 5px rgba(168, 88, 187, 0.4);
 }
 
 .skillset .formik__field {
-  color: green;
-  border-color: rgba(0, 128, 0, 0.6);
+  color: #a858bb;
+  border-color: rgba(168, 88, 187, 0.6);
 }
 
 @media (max-width: 580px) {
@@ -571,7 +617,7 @@ body {
 }
 
 .projects h3 {
-  color: blue;
+  color: #b286b6;
 }
 
 .contact {
@@ -590,7 +636,7 @@ body {
 }
 
 .contact h3 {
-  color: yellow;
+  color: #a798e5;
 }
 
 .mainBtn {
@@ -653,7 +699,7 @@ body {
 .skills__container .skill__object .skill__icon {
   background: -webkit-gradient(linear, right top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.1)));
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
-  color: green;
+  color: #a858bb;
 }
 
 .skills__container .skill__object {
@@ -812,38 +858,38 @@ body {
 }
 
 .project__present__container .present__right h1, .project__present__container .present__right h2, .project__present__container .present__right h3, .project__present__container .present__right h4 {
-  color: blue;
+  color: #b286b6;
 }
 
 .project__present__container .present__right p, .project__present__container .present__right span {
-  color: rgba(0, 0, 255, 0.6);
+  color: rgba(178, 134, 182, 0.6);
 }
 
 .project__present__container .present__right .socialIcon, .project__present__container .present__right a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(0, 0, 255, 0.6);
+  color: rgba(178, 134, 182, 0.6);
 }
 
 .project__present__container .present__right .socialIcon:hover, .project__present__container .present__right a:hover {
-  color: rgba(0, 0, 255, 0.8);
+  color: rgba(178, 134, 182, 0.8);
 }
 
 .project__present__container .present__right .mainBtn {
-  color: blue;
-  border-color: rgba(0, 0, 255, 0.8);
+  color: #b286b6;
+  border-color: rgba(178, 134, 182, 0.8);
 }
 
 .project__present__container .present__right .mainBtn:hover {
-  border-color: rgba(0, 0, 255, 0.6);
-  background: rgba(0, 0, 255, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.4);
-          box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.4);
+  border-color: rgba(178, 134, 182, 0.6);
+  background: rgba(178, 134, 182, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(178, 134, 182, 0.4);
+          box-shadow: 0 0 10px 5px rgba(178, 134, 182, 0.4);
 }
 
 .project__present__container .present__right .formik__field {
-  color: blue;
-  border-color: rgba(0, 0, 255, 0.6);
+  color: #b286b6;
+  border-color: rgba(178, 134, 182, 0.6);
 }
 
 .project__present__container .present__right h4 {
@@ -914,38 +960,38 @@ body {
 }
 
 .contact h1, .contact h2, .contact h3, .contact h4 {
-  color: yellow;
+  color: #a798e5;
 }
 
 .contact p, .contact span {
-  color: rgba(255, 255, 0, 0.6);
+  color: rgba(167, 152, 229, 0.6);
 }
 
 .contact .socialIcon, .contact a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(255, 255, 0, 0.6);
+  color: rgba(167, 152, 229, 0.6);
 }
 
 .contact .socialIcon:hover, .contact a:hover {
-  color: rgba(255, 255, 0, 0.8);
+  color: rgba(167, 152, 229, 0.8);
 }
 
 .contact .mainBtn {
-  color: yellow;
-  border-color: rgba(255, 255, 0, 0.8);
+  color: #a798e5;
+  border-color: rgba(167, 152, 229, 0.8);
 }
 
 .contact .mainBtn:hover {
-  border-color: rgba(255, 255, 0, 0.6);
-  background: rgba(255, 255, 0, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.4);
-          box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.4);
+  border-color: rgba(167, 152, 229, 0.6);
+  background: rgba(167, 152, 229, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(167, 152, 229, 0.4);
+          box-shadow: 0 0 10px 5px rgba(167, 152, 229, 0.4);
 }
 
 .contact .formik__field {
-  color: yellow;
-  border-color: rgba(255, 255, 0, 0.6);
+  color: #a798e5;
+  border-color: rgba(167, 152, 229, 0.6);
 }
 
 .contact p {
@@ -1115,38 +1161,38 @@ footer {
 }
 
 footer h1, footer h2, footer h3, footer h4 {
-  color: white;
+  color: #cd81b8;
 }
 
 footer p, footer span {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(205, 129, 184, 0.6);
 }
 
 footer .socialIcon, footer a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(205, 129, 184, 0.6);
 }
 
 footer .socialIcon:hover, footer a:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(205, 129, 184, 0.8);
 }
 
 footer .mainBtn {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.8);
+  color: #cd81b8;
+  border-color: rgba(205, 129, 184, 0.8);
 }
 
 footer .mainBtn:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
-          box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+  border-color: rgba(205, 129, 184, 0.6);
+  background: rgba(205, 129, 184, 0.2);
+  -webkit-box-shadow: 0 0 10px 5px rgba(205, 129, 184, 0.4);
+          box-shadow: 0 0 10px 5px rgba(205, 129, 184, 0.4);
 }
 
 footer .formik__field {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.6);
+  color: #cd81b8;
+  border-color: rgba(205, 129, 184, 0.6);
 }
 
 footer span {
@@ -1188,41 +1234,41 @@ header.p1 nav > ul > li > a:hover {
 header.p2 nav > ul > li > a {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  color: rgba(255, 0, 0, 0.6);
+  color: rgba(178, 39, 185, 0.6);
 }
 
 header.p2 nav > ul > li > a:hover {
-  color: rgba(255, 0, 0, 0.8);
+  color: rgba(178, 39, 185, 0.8);
 }
 
 header.p3 nav > ul > li > a {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  color: rgba(0, 128, 0, 0.6);
+  color: rgba(168, 88, 187, 0.6);
 }
 
 header.p3 nav > ul > li > a:hover {
-  color: rgba(0, 128, 0, 0.8);
+  color: rgba(168, 88, 187, 0.8);
 }
 
 header.p4 nav > ul > li > a {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  color: rgba(0, 0, 255, 0.6);
+  color: rgba(178, 134, 182, 0.6);
 }
 
 header.p4 nav > ul > li > a:hover {
-  color: rgba(0, 0, 255, 0.8);
+  color: rgba(178, 134, 182, 0.8);
 }
 
 header.p5 nav > ul > li > a {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  color: rgba(255, 255, 0, 0.6);
+  color: rgba(167, 152, 229, 0.6);
 }
 
 header.p5 nav > ul > li > a:hover {
-  color: rgba(255, 255, 0, 0.8);
+  color: rgba(167, 152, 229, 0.8);
 }
 
 header nav {

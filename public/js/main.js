@@ -2,7 +2,7 @@ $(document).ready(function () {
   console.log("jQuery loaded");
   var nPages = [$('#welcome'), $('#aboutme'), $('#skillset'), $('#projects'), $('#contact')];
   var nHeader = $('header');
-  setNewPage(0);
+  checkAllSections();
 
   function setNewPage(nID) {
     var nClass = 'p' + (nID+1);
@@ -12,13 +12,17 @@ $(document).ready(function () {
     nHeader.addClass(nClass);
   }
 
-  $(document).on('scroll', function() {
+  function checkAllSections() {
     var sTop = $(this).scrollTop();
     for( var i = 0; i < nPages.length; ++i){
       if( sTop >= nPages[i].position().top && sTop <= (nPages[i].position().top + nPages[i].height())){
         setNewPage(i);
       }
     }
+  }
+
+  $(document).on('scroll', function() {
+    checkAllSections();
   })
 
 }); // ready
