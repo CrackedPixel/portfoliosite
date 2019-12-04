@@ -100,28 +100,6 @@ body {
       animation: fadein 12s;
     }
 
-    .bef {
-      &:before {
-        content: " ";
-        transition: all 0.7s;
-        position: absolute;
-        height: 13vw;
-        width: 12vw;
-        
-        // border: 0 solid #fff;
-        border: 0;
-        border-style: solid;
-        opacity: 1;
-        pointer-events: none;
-        animation: fadeindelay 6s;
-        z-index: 0;
-        border-bottom-width: 0.5rem;
-        border-bottom-color: $col--before;
-        bottom: -1rem;
-        left: -1.3rem;
-      }
-    }
-
     &:after, &:before {
       content: " ";
       position: absolute;
@@ -149,10 +127,10 @@ body {
     &:before {
       z-index: 2;
       opacity: 1;
-      // border-bottom-width: 0.5rem;
+      border-bottom-width: 0.5rem;
       transition: all 0.8s;
       border-left-width: 0.75rem;
-      // border-bottom-color: $col--before;
+      border-bottom-color: $col--before;
       border-left-color: $col--before;
       bottom: -1rem;
       left: -2rem;

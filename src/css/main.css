@@ -323,26 +323,6 @@ body {
           animation: fadein 12s;
 }
 
-.welcome h1 .bef:before {
-  content: " ";
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
-  position: absolute;
-  height: 13vw;
-  width: 12vw;
-  border: 0;
-  border-style: solid;
-  opacity: 1;
-  pointer-events: none;
-  -webkit-animation: fadeindelay 6s;
-          animation: fadeindelay 6s;
-  z-index: 0;
-  border-bottom-width: 0.5rem;
-  border-bottom-color: #d5b2d5;
-  bottom: -1rem;
-  left: -1.3rem;
-}
-
 .welcome h1:after, .welcome h1:before {
   content: " ";
   position: absolute;
@@ -371,9 +351,11 @@ body {
 .welcome h1:before {
   z-index: 2;
   opacity: 1;
+  border-bottom-width: 0.5rem;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   border-left-width: 0.75rem;
+  border-bottom-color: #d5b2d5;
   border-left-color: #d5b2d5;
   bottom: -1rem;
   left: -2rem;
