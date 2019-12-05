@@ -10,6 +10,8 @@ export const Projects = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [carousel, setCarousel] = useState(0);
 
+  const [carousel_interval, scarouselinterval] = useState();
+
   useEffect( () => {
     fetch(`${config.dburl}projects.json`, {mode: 'cors', header: {'Access-Control-Allow-Origin':'*'}})
     .then(res => {return res.json()})
@@ -19,14 +21,15 @@ export const Projects = () => {
       console.log(err);
     })
 
-    const carousel_interval = setInterval( () => {
+    scarouselinterval(setInterval( () => {
       setCarousel( prevVal => prevVal+1); 
-    }, 5000)
+    }, 5000));
 
     return () => clearInterval(carousel_interval);
   }, [])
 
   const setNewSelectedProj = e => {
+    clearInterval(carousel_interval);
     if (e.target.getAttribute('value') === selectedProj) return;
     setCurImage(0);
     setSelectedProj(e.target.getAttribute('value'));
@@ -55,7 +58,7 @@ export const Projects = () => {
       <div className="project__selector__container">
         {
           projects.map((item, i) => {
-            return <Selector key={i} projid={i} clicky={setNewSelectedProj} src={item.pics[0]} alt={item.title + " preview"}/>
+            return <Selector key={i} projid={i} curSelectedProj={nSel} clicky={setNewSelectedProj} src={item.pics[0]} alt={item.title + " preview"}/>
           })
         }
       </div>

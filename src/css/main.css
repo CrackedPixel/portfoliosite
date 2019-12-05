@@ -814,6 +814,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.project__selector__container .project__selector__obj .project__selector__img.dimmed {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 .project__present__container {
