@@ -171,6 +171,16 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   @include pageBG($col-page2);
   @include pageColour($font-page2, $font-lighten--light);
 
+  
+  .mainBtn {
+    @include mkBtn(9.6rem, 3.2rem, 1rem 0 0 0, 0.6rem, unset, unset, 1px, $font-page2);
+    
+    .mainBtnIcon {
+      font-size: 1rem;
+      margin: 0 1vw;
+    }
+  }
+
   @media #{$mobile-s}{
     align-items: center;
     padding: 2.8rem 0 2rem 0;
@@ -226,16 +236,6 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   // background: linear-gradient(to bottom right, $col-page5, darken($col-page5, $darkenPage));
   @include pageBG($col-page5);
   @include pageColour($font-page4, $font-lighten--light);
-}
-
-.mainBtn {
-  @include mkBtn(9.6rem, 3.2rem, 1rem 0 0 0, 0.6rem, unset, unset, 1px, $font-page2);
-  
-  .mainBtnIcon {
-    font-size: 1rem;
-    margin: 0 1vw;
-  }
-
 }
 
 .skills__container {
@@ -374,11 +374,7 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
     display: flex;
 
     .project_btn {
-      // height: 50%;
       align-self: center;
-      // max-height: 120px;
-      // width: 30%;
-      // max-width: 80px;
       font-size: 3vw;
       background: 0;
       border: 0;
@@ -479,6 +475,10 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
       border-right: 1px solid $btn-col2;
       // max-width: 800px;
 
+      .mainBtn {
+        @include mkBtn(26vw, 6.5vw, 2vw 2vw 0 0, 2.8vw, unset, 0, 0.25vw, $font-page5);
+      }
+
       h4 {
         margin: 0 0 0.5rem 0;
       }
@@ -496,8 +496,6 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
       .formik__field[name="email"],.formik__field[name="name"] {
         height: 2rem;
-        
-        
       }
 
       .formik__field[name="message"] {
@@ -619,6 +617,7 @@ header {
   
   nav > ul > li {
     @include pageColour($font-page1, $font-lighten--dark);
+
     a {
       text-underline-offset: 5px;
       font-size: 1.5vw;
@@ -644,25 +643,21 @@ header {
   }
 
   @media #{$mobile-s} {
-    nav {
-      ul {
-        justify-content: space-around;
+    nav > ul {
+      justify-content: space-around;
 
-        li > a {
-          font-size: 5vw;
-        }
+      li > a {
+        font-size: 5vw;
       }
     }
   }
 
   @media #{$mobile-m} {
-    nav {
-      ul {
-        justify-content: space-around;
+    nav > ul {
+      justify-content: space-around;
 
-        li > a {
-          font-size: 3vw;
-        }
+      li > a {
+        font-size: 3vw;
       }
     }
   }

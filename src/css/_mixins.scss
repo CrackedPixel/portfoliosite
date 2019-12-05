@@ -29,18 +29,18 @@
     @include anchorColour($pageCol);
   }
 
-  .mainBtn {
-    color: $pageCol;
-    border-color: rgba($pageCol, $font-lighten--hover);
+  // .mainBtn {
+  //   color: $pageCol;
+  //   border-color: rgba($pageCol, $font-lighten--hover);
 
-    &:hover {
-      border-color: rgba($pageCol, $fontOpacity);
-      background: rgba($pageCol, $btn-lighten--hover);
+  //   &:hover {
+  //     border-color: rgba($pageCol, $fontOpacity);
+  //     background: rgba($pageCol, $btn-lighten--hover);
 
-      // box-shadow: box-shadow: 0 0 10px 5px $btn-lighten--border;
-      @include btnBoxShadow(0,0,10px,5px, rgba($pageCol, $btn-lighten--boxshadow));
-    }
-  }
+  //     // box-shadow: box-shadow: 0 0 10px 5px $btn-lighten--border;
+  //     @include btnBoxShadow(0,0,10px,5px, rgba($pageCol, $btn-lighten--boxshadow));
+  //   }
+  // }
 
   .formik__field {
     color: $pageCol;
@@ -54,7 +54,7 @@
 }
 
 
-@mixin mkBtn($width, $height, $margin, $fs, $align, $anim, $bw, $col) {
+@mixin mkBtn($width, $height, $margin, $fs, $align, $anim, $bw, $col, $hfc: $col) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,6 +84,7 @@
     span {
       text-decoration: underline;
       text-underline-offset: 5px;
+      color: $hfc;
     }
   }
 
