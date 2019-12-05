@@ -380,6 +380,9 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
   .present__left {
     margin-left: 1rem;
     display: flex;
+    
+    border-right: 2px solid rgba($font-page4, 0.2);
+    padding-right: 1rem;
 
     .project_btn {
       align-self: center;
@@ -445,9 +448,17 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
   @media #{$mobile-s} {
     flex-flow: column nowrap;
+
+    .present__left {
+      border-right: 0;
+    }
   }
   @media #{$mobile-m}{
     flex-flow: column nowrap;
+
+    .present__left {
+      border-right: 0;
+    }
   }
 }
 

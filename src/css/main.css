@@ -827,6 +827,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-right: 2px solid rgba(34, 40, 49, 0.2);
+  padding-right: 1rem;
 }
 
 .project__present__container .present__left .project_btn {
@@ -932,6 +934,9 @@ body {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
   }
+  .project__present__container .present__left {
+    border-right: 0;
+  }
 }
 
 @media (min-width: 581px) and (max-width: 830px) {
@@ -940,6 +945,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+  }
+  .project__present__container .present__left {
+    border-right: 0;
   }
 }
 
