@@ -37,6 +37,7 @@ h4 {
 
 h1, h2, h3, h4, h5 {
   font-family: $font--main;
+  font-weight: 500;
 }
 
 p, a {
@@ -526,6 +527,10 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
         border-style: solid;
         background: $btn-col3;
         border-radius: 5px;
+
+        &::placeholder {
+          color: rgba($font-page5, 1);
+        }
         // color: $white;
       }
 
@@ -578,10 +583,17 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
 
     .contact__mainpane {
       max-width: 200px;
+      display: flex;
+      flex-flow: column nowrap;
 
-      p {
+      a {
+        text-decoration: none;
         margin-bottom: 3rem;
         user-select: text;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       
@@ -603,6 +615,10 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
       @media #{$mobile-s} {
         h4 {
           font-size: 5vw;
+        }
+
+        a {
+          font-size: 4vw;
         }
       }
     }

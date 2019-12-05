@@ -232,6 +232,7 @@ h4 {
 
 h1, h2, h3, h4, h5 {
   font-family: "Ubuntu", "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 p, a {
@@ -345,6 +346,7 @@ body {
           animation: slideRight1 3.5s;
   border-width: 0.25vw;
   border-radius: 8px;
+  border-style: solid;
   color: #29a19c;
   border-color: #29a19c;
 }
@@ -502,6 +504,7 @@ body {
           animation: unset;
   border-width: 1px;
   border-radius: 8px;
+  border-style: solid;
   color: #fff4f4;
   border-color: #fff4f4;
 }
@@ -1063,6 +1066,7 @@ body {
           animation: 0;
   border-width: 1px;
   border-radius: 8px;
+  border-style: solid;
   color: #fff4f4;
   border-color: #fff4f4;
 }
@@ -1106,6 +1110,22 @@ body {
   border-style: solid;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
+}
+
+.contact .contact__whole__container .formik__form--container .formik__field::-webkit-input-placeholder {
+  color: #fff4f4;
+}
+
+.contact .contact__whole__container .formik__form--container .formik__field:-ms-input-placeholder {
+  color: #fff4f4;
+}
+
+.contact .contact__whole__container .formik__form--container .formik__field::-ms-input-placeholder {
+  color: #fff4f4;
+}
+
+.contact .contact__whole__container .formik__form--container .formik__field::placeholder {
+  color: #fff4f4;
 }
 
 .contact .contact__whole__container .formik__form--container .formik__field[name="email"], .contact .contact__whole__container .formik__form--container .formik__field[name="name"] {
@@ -1156,14 +1176,26 @@ body {
 
 .contact .contact__whole__container .contact__mainpane {
   max-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
-.contact .contact__whole__container .contact__mainpane p {
+.contact .contact__whole__container .contact__mainpane a {
+  text-decoration: none;
   margin-bottom: 3rem;
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
+}
+
+.contact .contact__whole__container .contact__mainpane a:hover {
+  text-decoration: underline;
 }
 
 .contact .contact__whole__container .contact__mainpane .social__container {
@@ -1188,6 +1220,9 @@ body {
 @media (max-width: 580px) {
   .contact .contact__whole__container .contact__mainpane h4 {
     font-size: 5vw;
+  }
+  .contact .contact__whole__container .contact__mainpane a {
+    font-size: 4vw;
   }
 }
 

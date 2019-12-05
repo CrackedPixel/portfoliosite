@@ -113,7 +113,7 @@ export const Contact = () => {
                 return (
                   <React.Fragment key={i}>
                     <h4>{item.title}</h4>
-                    <p>{item.content}</p>
+                    <a href={item.url}>{item.content}</a>
                   </React.Fragment>
                 )
               })
