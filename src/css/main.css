@@ -204,6 +204,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.fa {
+  font-family: 'FontAwesome' !important;
+}
+
 .App {
   display: -webkit-box;
   display: -ms-flexbox;
