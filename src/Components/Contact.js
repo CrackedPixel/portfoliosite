@@ -94,10 +94,12 @@ export const Contact = () => {
                     className="formik__field"
                   />
                   <ErrorMessage name="message" component="div" className="error error-message"/>
-                  <MainButton type="Submit" preicon="fa fa-share" text="Send"/>
-                  {
-                    sentEC > 0 ? sentEC === 200 ? <span className="emailResult__valid">Your message has been sent!</span> : <span className="emailResult__invalid">There was an error sending your message</span> : null
-                  }
+                  <div className="submitArea">
+                    <MainButton type="Submit" preicon="fa fa-share" text="Send"/>
+                    {
+                      sentEC > 0 ? sentEC === 200 ? <span className="emailResult__valid">Your message has been sent!</span> : <span className="emailResult__invalid">There was an error sending your message</span> : null
+                    }
+                  </div>
                 </Form>
               )
             }
