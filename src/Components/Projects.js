@@ -5,9 +5,10 @@ import { Present } from './Projects/Present';
 
 export const Projects = () => {
   const [projects, setProjects] = useState([]);
-  const [selectedProj, setSelectedProj] = useState(0);
+  const [selectedProj, setSelectedProj] = useState(null);
   const [curImage, setCurImage] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [carousel, setCarousel] = useState(0);
 
   useEffect( () => {
     fetch(`${config.dburl}projects.json`, {mode: 'cors', header: {'Access-Control-Allow-Origin':'*'}})
@@ -17,6 +18,12 @@ export const Projects = () => {
     .catch(err => {
       console.log(err);
     })
+
+    const carousel_interval = setInterval( () => {
+      setCarousel( prevVal => prevVal+1); 
+    }, 5000)
+
+    return () => clearInterval(carousel_interval);
   }, [])
 
   const setNewSelectedProj = e => {
@@ -35,6 +42,13 @@ export const Projects = () => {
     setCurImage(curImage+adjust);
   }
 
+  const nSel = selectedProj === null ? carousel === projects.length ? 0 : carousel: selectedProj;
+  const nImg = selectedProj === null ? 0 : curImage;
+
+  if (isLoaded && carousel === projects.length){
+    setCarousel(0);
+  }
+
   return (
     <div className="projects" id="projects">
       <h3>Projects</h3>
@@ -47,7 +61,7 @@ export const Projects = () => {
       </div>
       {
         isLoaded === true ? (
-          <Present cp={projects[selectedProj]} curImage={curImage} setNewCurImage={setNewCurImage} />
+          <Present cp={projects[nSel]} curImage={nImg} setNewCurImage={setNewCurImage} />
                 ) : null
       }
     </div>
