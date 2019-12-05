@@ -8,6 +8,8 @@ $globalWeight: 300;
 $globalWeight--header: 500;
 $globalWeight--btn: 400;
 
+$font--main: 'Ubuntu', 'Roboto', sans-serif;
+
 html {
   scroll-behavior: smooth;
 }
@@ -32,17 +34,23 @@ h4 {
   margin: 0 0 1rem 0;
 }
 
+
+h1, h2, h3, h4, h5 {
+  font-family: $font--main;
+}
+
 p, a {
   // color: $col-text_main;
   font-size: 1.1rem;
   margin: 0.5rem 0;
   font-weight: $globalWeight;
+  font-family: $font--main;
 }
 
 body {
   background: black;
   user-select: none;
-  font-family: 'Roboto', sans-serif;
+  // font-family: $font--main;
 }
 
 .page {
@@ -52,10 +60,10 @@ body {
 .welcome {
   @include displayFlex(column nowrap, 100%, 100vh, 0, 5rem 5vw 5rem 5vw);
   justify-content: center;
-  // Colours
   @include pageColour($font-page1, 0.8);
 
   h2 {
+
     position: relative;
     animation: slideUp1 2s;
   }
