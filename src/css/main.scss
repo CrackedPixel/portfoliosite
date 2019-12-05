@@ -53,7 +53,7 @@ body {
   @include displayFlex(column nowrap, 100%, 100vh, 0, 5rem 5vw 5rem 5vw);
   justify-content: center;
   // Colours
-  @include pageColour($font-page1, 0.5);
+  @include pageColour($font-page1, 0.8);
 
   h2 {
     position: relative;
