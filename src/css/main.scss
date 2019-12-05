@@ -12,8 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.fa { font-family: 'FontAwesome' !important; }
-
 .App {
   display: flex;
   flex-flow: column nowrap;
@@ -478,7 +476,11 @@ $pagePad: 2.8rem 10vw 5rem 10vw;
       // max-width: 800px;
 
       .mainBtn {
-        @include mkBtn(26vw, 6.5vw, 2vw 2vw 0 0, 2.8vw, unset, 0, 0.25vw, $font-page5);
+        @include mkBtn(13vw, 5vw, 2vw 2vw 0 0, 2vw, unset, 0, 0.25vw, $font-page5);
+
+        .mainBtnIcon {
+          margin: 1vw;
+        }
       }
 
       h4 {

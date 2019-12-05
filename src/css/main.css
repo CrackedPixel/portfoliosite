@@ -204,10 +204,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.fa {
-  font-family: 'FontAwesome' !important;
-}
-
 .App {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,6 +366,7 @@ body {
 .welcome .mainBtn .mainBtnIcon {
   font-size: 2.8vw;
   color: #29a19c;
+  margin: 1vw -2vw 1vw 1vw;
 }
 
 .welcome h1 {
@@ -526,6 +523,7 @@ body {
 .about .mainBtn .mainBtnIcon {
   font-size: 0.6rem;
   color: #222831;
+  margin: 1vw -2vw 1vw 1vw;
 }
 
 .about .mainBtn .mainBtnIcon {
@@ -1021,9 +1019,9 @@ body {
   transition: all 0.5s ease-out;
   background: transparent;
   margin: 2vw 2vw 0 0;
-  width: 26vw;
-  height: 6.5vw;
-  font-size: 2.8vw;
+  width: 13vw;
+  height: 5vw;
+  font-size: 2vw;
   font-weight: 400;
   line-height: 0.6rem;
   position: relative;
@@ -1056,8 +1054,13 @@ body {
 }
 
 .contact .contact__whole__container .formik__form--container .mainBtn .mainBtnIcon {
-  font-size: 2.8vw;
+  font-size: 2vw;
   color: #fff4f4;
+  margin: 1vw -2vw 1vw 1vw;
+}
+
+.contact .contact__whole__container .formik__form--container .mainBtn .mainBtnIcon {
+  margin: 1vw;
 }
 
 .contact .contact__whole__container .formik__form--container h4 {
