@@ -81,7 +81,7 @@ $font-page5: lighten(adjust-hue($col-page5, $hslChange), $lD);
 $font-footer: lighten(adjust-hue($col-footer, $hslChange), $lD);
 
 $font-page1: $font-darkbg-col;
-$font-page2: $font-lightbg-col;
+$font-page2: $font-darkbg-col;
 $font-page3: $font-darkbg-col;
 $font-page4: $font-lightbg-col;
 $font-page5: $font-darkbg-col;

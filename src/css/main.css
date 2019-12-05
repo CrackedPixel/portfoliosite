@@ -453,22 +453,22 @@ body {
 }
 
 .about h1, .about h2, .about h3, .about h4, .about p, .about span, .about .col1, .about p > a {
-  color: rgba(34, 40, 49, 0.9);
+  color: rgba(255, 244, 244, 0.9);
 }
 
 .about .socialIcon, .about a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: rgba(34, 40, 49, 0.9);
+  color: rgba(255, 244, 244, 0.9);
 }
 
 .about .socialIcon:hover, .about a:hover {
-  color: rgba(34, 40, 49, 0.8);
+  color: rgba(255, 244, 244, 0.8);
 }
 
 .about .formik__field {
-  color: #222831;
-  border-color: rgba(34, 40, 49, 0.9);
+  color: #fff4f4;
+  border-color: rgba(255, 244, 244, 0.9);
 }
 
 .about .mainBtn {
@@ -498,31 +498,31 @@ body {
           animation: unset;
   border-width: 1px;
   border-radius: 8px;
-  color: #222831;
-  border-color: #222831;
+  color: #fff4f4;
+  border-color: #fff4f4;
 }
 
 .about .mainBtn:hover {
   cursor: pointer;
-  background-color: rgba(34, 40, 49, 0.3);
-  -webkit-box-shadow: 0 0 10px 5px rgba(34, 40, 49, 0.5);
-          box-shadow: 0 0 10px 5px rgba(34, 40, 49, 0.5);
+  background-color: rgba(255, 244, 244, 0.3);
+  -webkit-box-shadow: 0 0 10px 5px rgba(255, 244, 244, 0.5);
+          box-shadow: 0 0 10px 5px rgba(255, 244, 244, 0.5);
 }
 
 .about .mainBtn:hover span {
   text-decoration: underline;
   text-underline-offset: 5px;
-  color: #222831;
+  color: #fff4f4;
 }
 
 .about .mainBtn span {
-  color: #222831;
+  color: #fff4f4;
   letter-spacing: 0.25vw;
 }
 
 .about .mainBtn .mainBtnIcon {
   font-size: 0.6rem;
-  color: #222831;
+  color: #fff4f4;
   margin: 1vw -2vw 1vw 1vw;
 }
 
